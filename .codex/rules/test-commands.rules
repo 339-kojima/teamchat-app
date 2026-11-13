@@ -1,0 +1,19 @@
+prefix_rule(
+    pattern = ["./vendor/bin/sail", "test"],
+    decision = "allow",
+    justification = "Run this repository's Laravel test suite without an approval prompt.",
+    match = [
+        "./vendor/bin/sail test",
+        "./vendor/bin/sail test tests/Feature/ExampleTest.php",
+    ],
+)
+
+prefix_rule(
+    pattern = ["./vendor/bin/sail", "artisan", "test"],
+    decision = "allow",
+    justification = "Run this repository's Laravel test suite without an approval prompt.",
+    match = [
+        "./vendor/bin/sail artisan test",
+        "./vendor/bin/sail artisan test tests/Feature/ExampleTest.php",
+    ],
+)

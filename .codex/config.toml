@@ -1,0 +1,33 @@
+approval_policy = "on-request"
+default_permissions = "teamchat"
+
+[permissions.teamchat]
+description = "Allow repository work while keeping client-provided specifications read-only."
+extends = ":workspace"
+
+[permissions.teamchat.filesystem.":workspace_roots"]
+"docs/spec.md" = "read"
+"mockup" = "read"
+"mockup/**" = "read"
+
+[[hooks.PostToolUse]]
+matcher = "apply_patch|Edit|Write"
+
+[[hooks.PostToolUse.hooks]]
+type = "command"
+command = '''python3 -c 'exec("""import json, os, subprocess
+root = subprocess.run(["git", "rev-parse", "--show-toplevel"], check=True, capture_output=True, text=True).stdout.strip()
+try:
+    result = subprocess.run(["./vendor/bin/sail", "test"], cwd=root, capture_output=True, text=True)
+except OSError as error:
+    result = None
+    detail = str(error)
+if result is None or result.returncode != 0:
+    if result is not None:
+        detail = (result.stdout + result.stderr)[-12000:]
+        code = result.returncode
+    else:
+        code = 127
+    print(json.dumps({"continue": False, "stopReason": f"編集後の Laravel テストが失敗しました (exit {code})。修正して再実行してください。", "hookSpecificOutput": {"hookEventName": "PostToolUse", "additionalContext": detail}}, ensure_ascii=False))""")' '''
+timeout = 1800
+statusMessage = "編集後に Laravel テストを実行中"
