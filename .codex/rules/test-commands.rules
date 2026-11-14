@@ -17,3 +17,12 @@ prefix_rule(
         "./vendor/bin/sail artisan test tests/Feature/ExampleTest.php",
     ],
 )
+
+prefix_rule(
+    pattern = ["./vendor/bin/sail", "pint"],
+    decision = "allow",
+    justification = "Format this repository's PHP files with Laravel Pint without an approval prompt.",
+    match = [
+        "./vendor/bin/sail pint",
+    ],
+)
