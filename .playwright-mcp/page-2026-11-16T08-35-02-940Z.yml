@@ -1,0 +1,31 @@
+- main [ref=f8e2]:
+  - region "新規登録" [ref=f8e3]:
+    - generic [ref=f8e4]:
+      - generic [aria-hidden] [ref=f8e5]: チ
+      - text: チームチャットアプリ
+    - heading "新規登録" [level=1] [ref=f8e6]
+    - generic [ref=f8e7]:
+      - generic [ref=f8e8]:
+        - generic [ref=f8e9]: 表示名*
+        - textbox "表示名*" [ref=f8e10]: Invalid Email
+        - generic [ref=f8e11]:
+          - generic [ref=f8e12]: メッセージに表示される名前です。
+          - generic [ref=f8e13]: 13 / 30
+      - generic [ref=f8e14]:
+        - generic [ref=f8e15]: メールアドレス*
+        - textbox "メールアドレス*" [invalid] [ref=f8e16]: invalid-email
+        - generic [ref=f8e17]:
+          - generic [aria-hidden] [ref=f8e18]: "!"
+          - text: メールアドレスの形式が正しくありません
+      - generic [ref=f8e19]:
+        - generic [ref=f8e20]: パスワード*
+        - textbox "パスワード*" [ref=f8e21]
+        - generic [ref=f8e22]: 8文字以上で入力してください。
+      - generic [ref=f8e23]:
+        - generic [ref=f8e24]: パスワード（確認用）*
+        - textbox "パスワード（確認用）*" [ref=f8e25]
+      - button "登録する" [ref=f8e26] [cursor=pointer]
+    - generic [ref=f8e27]:
+      - text: すでにアカウントをお持ちの方は
+      - link "ログイン" [ref=f8e28] [cursor=pointer]:
+        - /url: http://localhost/login

@@ -1,0 +1,28 @@
+- main [ref=f10e2]:
+  - region "新規登録" [ref=f10e3]:
+    - generic [ref=f10e4]:
+      - generic [aria-hidden] [ref=f10e5]: チ
+      - text: チームチャットアプリ
+    - heading "新規登録" [level=1] [ref=f10e6]
+    - generic [ref=f10e7]:
+      - generic [ref=f10e8]:
+        - generic [ref=f10e9]: 表示名*
+        - textbox "表示名*" [ref=f10e10]
+        - generic [ref=f10e11]:
+          - generic [ref=f10e12]: メッセージに表示される名前です。
+          - generic [ref=f10e13]: 0 / 30
+      - generic [ref=f10e14]:
+        - generic [ref=f10e15]: メールアドレス*
+        - textbox "メールアドレス*" [ref=f10e16]
+      - generic [ref=f10e17]:
+        - generic [ref=f10e18]: パスワード*
+        - textbox "パスワード*" [ref=f10e19]
+        - generic [ref=f10e20]: 8文字以上で入力してください。
+      - generic [ref=f10e21]:
+        - generic [ref=f10e22]: パスワード（確認用）*
+        - textbox "パスワード（確認用）*" [ref=f10e23]
+      - button "登録する" [ref=f10e24] [cursor=pointer]
+    - generic [ref=f10e25]:
+      - text: すでにアカウントをお持ちの方は
+      - link "ログイン" [ref=f10e26] [cursor=pointer]:
+        - /url: http://localhost/login

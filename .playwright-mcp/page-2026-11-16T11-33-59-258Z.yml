@@ -1,0 +1,11 @@
+- generic [ref=f12e2]:
+  - banner [ref=f12e3]:
+    - generic [ref=f12e4]:
+      - generic [aria-hidden] [ref=f12e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f12e6]:
+      - generic [ref=f12e7]: UAT User A
+      - button "ログアウト" [ref=f12e9] [cursor=pointer]
+  - main [ref=f12e10]:
+    - heading "チャンネル一覧" [level=1] [ref=f12e11]
+    - region "チャンネル一覧" [ref=f12e12]: チャンネルはまだありません。
