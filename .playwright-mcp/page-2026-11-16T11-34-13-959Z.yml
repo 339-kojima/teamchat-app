@@ -1,0 +1,18 @@
+- main [ref=f13e2]:
+  - region "ログイン" [ref=f13e3]:
+    - generic [ref=f13e4]:
+      - generic [aria-hidden] [ref=f13e5]: チ
+      - text: チームチャットアプリ
+    - heading "ログイン" [level=1] [ref=f13e6]
+    - generic [ref=f13e7]:
+      - generic [ref=f13e8]:
+        - generic [ref=f13e9]: メールアドレス
+        - textbox "メールアドレス" [ref=f13e10]
+      - generic [ref=f13e11]:
+        - generic [ref=f13e12]: パスワード
+        - textbox "パスワード" [ref=f13e13]
+      - button "ログイン" [ref=f13e14] [cursor=pointer]
+    - generic [ref=f13e15]:
+      - text: アカウントをお持ちでない方は
+      - link "新規登録" [ref=f13e16] [cursor=pointer]:
+        - /url: http://localhost/register
