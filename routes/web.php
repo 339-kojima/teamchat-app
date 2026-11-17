@@ -20,9 +20,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/channels', [ChannelController::class, 'index'])
-    ->middleware('auth')
-    ->name('channels.index');
+Route::middleware('auth')->group(function () {
+    Route::get('/channels', [ChannelController::class, 'index'])->name('channels.index');
+    Route::get('/channels/create', [ChannelController::class, 'create'])->name('channels.create');
+    Route::post('/channels', [ChannelController::class, 'store'])->name('channels.store');
+    Route::get('/channels/{channel}/edit', [ChannelController::class, 'edit'])->name('channels.edit');
+    Route::put('/channels/{channel}', [ChannelController::class, 'update'])->name('channels.update');
+    Route::delete('/channels/{channel}', [ChannelController::class, 'destroy'])->name('channels.destroy');
+    Route::get('/channels/{channel}', [ChannelController::class, 'show'])->name('channels.show');
+});
 
 Route::get('/register', [UserController::class, 'create'])->name('register');
 Route::post('/register', [UserController::class, 'store'])->name('register.store');

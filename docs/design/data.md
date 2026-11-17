@@ -5,8 +5,8 @@
 ```mermaid
 erDiagram
   USERS ||--o{ CHANNELS : creates
-  USERS ||--o{ CHANNEL_MEMBERS : joins
-  CHANNELS ||--o{ CHANNEL_MEMBERS : includes
+  USERS ||--o{ CHANNEL_USER : joins
+  CHANNELS ||--o{ CHANNEL_USER : includes
   CHANNELS ||--o{ MESSAGES : contains
   USERS ||--o{ MESSAGES : writes
   MESSAGES ||--o{ MESSAGES : has_replies
@@ -24,7 +24,7 @@ erDiagram
     text description "nullable when blank"
     boolean is_private
   }
-  CHANNEL_MEMBERS {
+  CHANNEL_USER {
     bigint channel_id PK,FK
     bigint user_id PK,FK
   }
@@ -48,18 +48,18 @@ erDiagram
 |:--|:--|:--|
 | `users` | `id`, `name`, `email`, `password` | `id` は主キー。`name` は表示名で30文字以内。`email` は一意で、254文字以内、形式を検証する（Q-18）。`password` は登録パスワードをハッシュ化して保存する。 |
 | `channels` | `id`, `owner_id`, `name`, `description`, `is_private` | `id` は主キー、`owner_id` は `users.id` への外部キー。`name` は50文字以内、`description` は200文字以内、`is_private` が公開範囲を表す。Q-03 により `(name, is_private)` の組み合わせを一意にする。説明が空欄の場合は `NULL` で保存する（確認回答）。 |
-| `channel_members` | `channel_id`, `user_id` | 2カラムの組み合わせが主キーで、両方とも対応するテーブルへの外部キー。公開範囲がプライベートのチャンネルで、閲覧・投稿できるメンバーを表す。チャンネル作成時は作成者を登録する。 |
+| `channel_user` | `channel_id`, `user_id` | 2カラムの組み合わせが主キーで、両方とも対応するテーブルへの外部キー。公開範囲がプライベートのチャンネルで、閲覧・投稿できるメンバーを表す。チャンネル作成時は作成者を登録する。 |
 | `messages` | `id`, `channel_id`, `user_id`, `parent_id`, `body`, `edited_at`, `deleted_at`, `created_at` | `id` は主キー。`channel_id` と `user_id` は外部キー。`parent_id` は同じ `messages.id` への nullable 外部キー。`body` は1,000文字以内。作成時刻を `created_at` に保存し、編集後は `edited_at` を設定する。時刻は Asia/Tokyo で扱う（Q-15）。削除時は本文を `NULL`、`deleted_at` を削除時刻にし、行・投稿者・作成時刻・親子関係を保持する。画面では `deleted_at` が設定された行の本文位置に「このメッセージは削除されました」を表示する。 |
 
 削除済み状態は `deleted_at` で判定し、表示用文言はDBの `body` に保存しない。検索と公開APIでは削除済み行を除外する。論理削除により元本文は行に残らない。削除済み親の返信は同じ親IDを参照し続ける。
 
-チャンネルを削除したときは、そのチャンネルのメッセージ・返信とメンバー情報も削除する（Q-05）。削除をDBの外部キー連鎖で行うか、アプリケーション処理で明示するかは資料に指定がないため未決定。
+チャンネルを削除したときは、そのチャンネルのメッセージ・返信とメンバー情報も削除する（Q-05）。このIssueではチャンネルとメンバー情報を削除する。メッセージ・返信を削除するため、メッセージテーブルを追加するIssueで `messages.channel_id` の外部キー連鎖を実装する。
 
 ## CRUD表
 
 各セルは該当機能が対象テーブルに行う操作を示す。`C` は作成、`R` は読み取り、`U` は更新、`D` は削除。`—` は直接操作なし。
 
-| 機能 | `users` | `channels` | `channel_members` | `messages` |
+| 機能 | `users` | `channels` | `channel_user` | `messages` |
 |:--|:--:|:--:|:--:|:--:|
 | F-01 アカウント登録 | C | — | — | — |
 | F-02 ログイン・ログアウト | R | — | — | — |
@@ -78,11 +78,10 @@ erDiagram
 
 - F-06 の `messages` の D はチャンネル削除に伴うメッセージ・返信の完全削除。F-08 の削除は案Aの論理削除なので `messages` の U とする。
 - F-07 の `users` の R はメンバー追加対象を探すため、`channels` の R は対象チャンネルと公開範囲を扱うため。
-- F-10 は閲覧可能範囲を適用するため `channel_members`、結果にチャンネル名と投稿者を含めるため `channels` と `users` を読む。
+- F-10 は閲覧可能範囲を適用するため `channel_user`、結果にチャンネル名と投稿者を含めるため `channels` と `users` を読む。
 - F-11 は公開チャンネルと投稿者情報を返すため `channels`、`messages`、`users` を読む。削除済みメッセージは `deleted_at` で除外する。削除済み親に付く未削除返信のAPI上の扱いは確認事項に委ねる。
 - F-12 は所定の初期データを作成・更新する。再実行時は初期データだけを同じ状態に戻し、利用者が追加したデータは残す（Q-14）。
 
 ## 資料に指定がない実装事項
 
-- F-06 で関連データを削除する際、外部キー連鎖とアプリケーション側の明示削除のどちらにするか。
 - F-12 の再実行時に、利用者が追加したデータと区別しながら初期データを更新する具体的な方法。

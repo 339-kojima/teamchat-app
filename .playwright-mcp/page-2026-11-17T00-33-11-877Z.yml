@@ -1,0 +1,53 @@
+- generic [ref=f15e2]:
+  - banner [ref=f15e3]:
+    - link "チームチャットアプリ" [ref=f15e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f15e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f15e6]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f15e8]
+  - generic [ref=f15e9]:
+    - navigation "チャンネル" [ref=f15e10]:
+      - link "UAT公開1117" [ref=f15e12] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "UAT非公開1117" [ref=f15e13] [cursor=pointer]:
+        - /url: http://localhost/channels/2
+        - text: ▣ UAT非公開1117
+      - link "チャンネル一覧を見る" [ref=f15e14] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f15e15] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f15e16]:
+      - generic [ref=f15e17]:
+        - heading "チャンネルを編集する" [level=1] [ref=f15e18]
+        - generic [ref=f15e19]:
+          - generic [ref=f15e20]:
+            - generic [ref=f15e21]: チャンネル名*
+            - textbox "チャンネル名*" [ref=f15e22]: UAT非公開1117
+            - generic [ref=f15e23]: プライベートチャンネルです。公開範囲はあとから変更できません。
+          - generic [ref=f15e25]:
+            - generic [ref=f15e26]: 説明
+            - textbox "説明" [ref=f15e27]: 非公開範囲の受け入れ確認
+            - generic [ref=f15e28]:
+              - generic [ref=f15e29]: 200文字以内で入力してください。
+              - generic [ref=f15e30]: 200文字以内
+          - generic [ref=f15e31]:
+            - link "キャンセル" [ref=f15e32] [cursor=pointer]:
+              - /url: http://localhost/channels/2
+            - button "保存する" [ref=f15e33] [cursor=pointer]
+        - generic [ref=f15e34]:
+          - heading "チャンネルを削除する" [level=2] [ref=f15e35]
+          - generic [ref=f15e36]:
+            - strong [ref=f15e37]: このチャンネルを削除します
+            - paragraph [ref=f15e38]: メッセージと返信もすべて削除され、元に戻せません。
+          - generic [ref=f15e39]:
+            - generic [ref=f15e40]:
+              - generic [ref=f15e41]: 「UAT非公開1117」を削除します。確認のためチャンネル名を入力してください。
+              - textbox "「UAT非公開1117」を削除します。確認のためチャンネル名を入力してください。" [ref=f15e42]:
+                - /placeholder: UAT非公開1117
+            - generic [ref=f15e43]:
+              - link "やめる" [ref=f15e44] [cursor=pointer]:
+                - /url: http://localhost/channels/2
+              - button "削除する" [ref=f15e45] [cursor=pointer]
