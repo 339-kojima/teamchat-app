@@ -38,4 +38,26 @@ class ChannelPolicy
     {
         return $this->update($user, $channel);
     }
+
+    public function manageMembers(User $user, Channel $channel): Response
+    {
+        if (! $channel->is_private || $channel->owner_id !== $user->id) {
+            return Response::denyAsNotFound();
+        }
+
+        return Response::allow();
+    }
+
+    public function removeMember(User $user, Channel $channel, User $member): Response
+    {
+        if (! $this->manageMembers($user, $channel)->allowed()) {
+            return Response::denyAsNotFound();
+        }
+
+        if ($member->is($channel->owner) || ! $channel->members()->whereKey($member->getKey())->exists()) {
+            return Response::denyAsNotFound();
+        }
+
+        return Response::allow();
+    }
 }

@@ -32,6 +32,9 @@
             @can('update', $channel)
                 <a class="btn" href="{{ route('channels.edit', $channel) }}">編集</a>
             @endcan
+            @can('manageMembers', $channel)
+                <a class="btn" href="{{ route('channels.members.index', $channel) }}">メンバー管理</a>
+            @endcan
             <a class="btn" href="{{ route('channels.index') }}">チャンネル一覧へ戻る</a>
         </div>
 

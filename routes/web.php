@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ChannelController;
+use App\Http\Controllers\ChannelMemberController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\UserController;
@@ -28,6 +29,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/channels/{channel}/edit', [ChannelController::class, 'edit'])->name('channels.edit');
     Route::put('/channels/{channel}', [ChannelController::class, 'update'])->name('channels.update');
     Route::delete('/channels/{channel}', [ChannelController::class, 'destroy'])->name('channels.destroy');
+    Route::get('/channels/{channel}/members', [ChannelMemberController::class, 'index'])->name('channels.members.index');
+    Route::post('/channels/{channel}/members', [ChannelMemberController::class, 'store'])->name('channels.members.store');
+    Route::delete('/channels/{channel}/members/{user}', [ChannelMemberController::class, 'destroy'])->name('channels.members.destroy');
     Route::post('/channels/{channel}/messages', [MessageController::class, 'store'])->name('messages.store');
     Route::get('/messages/{message}/delete', [MessageController::class, 'confirmDestroy'])->name('messages.delete.confirm');
     Route::put('/messages/{message}', [MessageController::class, 'update'])->name('messages.update');
