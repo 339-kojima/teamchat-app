@@ -1,0 +1,53 @@
+- generic [ref=f23e2]:
+  - banner [ref=f23e3]:
+    - link "チームチャットアプリ" [ref=f23e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f23e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f23e6]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f23e8]
+  - generic [ref=f23e9]:
+    - navigation "チャンネル" [ref=f23e10]:
+      - link "UATメンバー管理1118" [ref=f23e12] [cursor=pointer]:
+        - /url: http://localhost/channels/3
+        - text: ▣ UATメンバー管理1118
+      - link "UAT公開1117" [ref=f23e13] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f23e14] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f23e15] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f23e16]:
+      - generic [ref=f23e17]:
+        - heading "チャンネルを編集する" [level=1] [ref=f23e18]
+        - generic [ref=f23e19]:
+          - generic [ref=f23e20]:
+            - generic [ref=f23e21]: チャンネル名*
+            - textbox "チャンネル名*" [ref=f23e22]: UATメンバー管理1118
+            - generic [ref=f23e23]: プライベートチャンネルです。公開範囲はあとから変更できません。
+          - generic [ref=f23e25]:
+            - generic [ref=f23e26]: 説明
+            - textbox "説明" [ref=f23e27]: "Issue #4 受け入れ確認用"
+            - generic [ref=f23e28]:
+              - generic [ref=f23e29]: 200文字以内で入力してください。
+              - generic [ref=f23e30]: 200文字以内
+          - generic [ref=f23e31]:
+            - link "キャンセル" [ref=f23e32] [cursor=pointer]:
+              - /url: http://localhost/channels/3
+            - button "保存する" [ref=f23e33] [cursor=pointer]
+        - generic [ref=f23e34]:
+          - heading "チャンネルを削除する" [level=2] [ref=f23e35]
+          - generic [ref=f23e36]:
+            - strong [ref=f23e37]: このチャンネルを削除します
+            - paragraph [ref=f23e38]: メッセージと返信もすべて削除され、元に戻せません。
+          - generic [ref=f23e39]:
+            - generic [ref=f23e40]:
+              - generic [ref=f23e41]: 「UATメンバー管理1118」を削除します。確認のためチャンネル名を入力してください。
+              - textbox "「UATメンバー管理1118」を削除します。確認のためチャンネル名を入力してください。" [ref=f23e42]:
+                - /placeholder: UATメンバー管理1118
+            - generic [ref=f23e43]:
+              - link "やめる" [ref=f23e44] [cursor=pointer]:
+                - /url: http://localhost/channels/3
+              - button "削除する" [ref=f23e45] [cursor=pointer]

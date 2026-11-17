@@ -1,0 +1,32 @@
+- generic [ref=f20e2]:
+  - banner [ref=f20e3]:
+    - link "チームチャットアプリ" [ref=f20e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f20e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f20e6]:
+      - text: UAT User B
+      - button "ログアウト" [ref=f20e8]
+  - generic [ref=f20e9]:
+    - navigation "チャンネル" [ref=f20e10]:
+      - link "UAT公開1117" [ref=f20e12] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f20e13] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f20e14] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f20e15]:
+      - generic [ref=f20e16]:
+        - generic [ref=f20e17]:
+          - generic [ref=f20e18]:
+            - heading "チャンネル一覧" [level=1] [ref=f20e19]
+            - paragraph [ref=f20e20]: 公開チャンネルは、ログインしている社員なら誰でも読み書きできます。
+          - link "＋ チャンネルを作る" [ref=f20e21] [cursor=pointer]:
+            - /url: http://localhost/channels/create
+        - article [ref=f20e23]:
+          - generic [ref=f20e24]:
+            - heading "UAT公開1117 公開" [level=2] [ref=f20e25]: "# UAT公開1117 公開"
+            - paragraph [ref=f20e26]: 公開範囲の受け入れ確認 · 作成者：UAT User A
+          - link "開く" [ref=f20e28] [cursor=pointer]:
+            - /url: http://localhost/channels/1

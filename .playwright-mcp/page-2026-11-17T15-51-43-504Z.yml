@@ -1,0 +1,57 @@
+- generic [ref=f11e2]:
+  - banner [ref=f11e3]:
+    - link "チームチャットアプリ" [ref=f11e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f11e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f11e6]:
+      - text: UAT User B
+      - button "ログアウト" [ref=f11e8]
+  - generic [ref=f11e9]:
+    - navigation "チャンネル" [ref=f11e10]:
+      - link "UATメンバー管理1118" [ref=f11e12] [cursor=pointer]:
+        - /url: http://localhost/channels/3
+        - text: ▣ UATメンバー管理1118
+      - link "UAT公開1117" [ref=f11e13] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f11e14] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f11e15] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f11e16]:
+      - generic [ref=f11e17]:
+        - generic [ref=f11e18]:
+          - generic [ref=f11e19]:
+            - heading "UATメンバー管理1118" [level=1] [ref=f11e20]: ▣ UATメンバー管理1118
+            - paragraph [ref=f11e21]: "Issue #4 受け入れ確認用"
+          - text: プライベート
+        - generic [ref=f11e22]:
+          - generic [ref=f11e23]:
+            - term [ref=f11e24]: 作成者
+            - definition [ref=f11e25]: UAT User A
+          - generic [ref=f11e26]:
+            - term [ref=f11e27]: 公開範囲
+            - definition [ref=f11e28]: プライベート
+        - link "チャンネル一覧へ戻る" [ref=f11e30] [cursor=pointer]:
+          - /url: http://localhost/channels
+        - region "メッセージ" [ref=f11e31]:
+          - article [ref=f11e33]:
+            - generic [aria-hidden] [ref=f11e34]: U
+            - generic [ref=f11e35]:
+              - generic [ref=f11e36]:
+                - strong [ref=f11e37]: UAT User B
+                - time [ref=f11e38]: 2026/11/17 15:51
+              - paragraph [ref=f11e39]: userb の投稿確認です
+              - generic [ref=f11e40]:
+                - link "編集" [ref=f11e41] [cursor=pointer]:
+                  - /url: http://localhost/channels/3?edit=4#message-4
+                - link "削除" [ref=f11e42] [cursor=pointer]:
+                  - /url: http://localhost/messages/4/delete
+          - generic [ref=f11e43]:
+            - generic [ref=f11e44]:
+              - generic [ref=f11e45]: メッセージ
+              - textbox "メッセージ" [ref=f11e46]:
+                - /placeholder: "#UATメンバー管理1118 にメッセージを送る"
+              - generic [ref=f11e47]: 1,000文字以内で入力してください。
+            - button "送信" [ref=f11e50] [cursor=pointer]

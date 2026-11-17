@@ -1,0 +1,53 @@
+- generic [ref=f7e2]:
+  - banner [ref=f7e3]:
+    - link "チームチャットアプリ" [ref=f7e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f7e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f7e6]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f7e8]
+  - generic [ref=f7e9]:
+    - navigation "チャンネル" [ref=f7e10]:
+      - link "UATメンバー管理1118" [ref=f7e12] [cursor=pointer]:
+        - /url: http://localhost/channels/3
+        - text: ▣ UATメンバー管理1118
+      - link "UAT公開1117" [ref=f7e13] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f7e14] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f7e15] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f7e16]:
+      - generic [ref=f7e17]:
+        - generic [ref=f7e18]:
+          - generic [ref=f7e19]:
+            - heading "UATメンバー管理1118 プライベート" [level=1] [ref=f7e20]: ▣ UATメンバー管理1118 プライベート
+            - paragraph [ref=f7e21]: "Issue #4 受け入れ確認用 · 追加された人だけが読み書きできます。"
+          - link "チャンネルを開く" [ref=f7e22] [cursor=pointer]:
+            - /url: http://localhost/channels/3
+        - region "メンバーを追加する" [ref=f7e23]:
+          - heading "メンバーを追加する" [level=2] [ref=f7e24]
+          - generic [ref=f7e25]:
+            - text: 表示名またはメールアドレスで探す
+            - textbox "表示名またはメールアドレスで探す" [ref=f7e26]: userb@example.com
+            - button "検索" [ref=f7e27] [cursor=pointer]
+          - generic "検索結果" [ref=f7e28]:
+            - paragraph [ref=f7e29]: 該当する社員はいません。
+        - region "メンバー 2人" [ref=f7e30]:
+          - heading "メンバー 2人" [level=2] [ref=f7e31]
+          - generic [ref=f7e32]:
+            - article [ref=f7e33]:
+              - generic [aria-hidden] [ref=f7e34]: UA
+              - generic [ref=f7e35]:
+                - strong [ref=f7e36]: UAT User A 作成者
+                - text: usera@example.com
+              - text: 作成者は外せません
+            - article [ref=f7e37]:
+              - generic [aria-hidden] [ref=f7e38]: UA
+              - generic [ref=f7e39]:
+                - strong [ref=f7e40]: UAT User B
+                - text: userb@example.com
+              - button "外す" [ref=f7e42] [cursor=pointer]
+          - paragraph [ref=f7e43]: この画面を開けるのは、プライベートチャンネルを作った人だけです。公開チャンネルにはメンバーの管理はありません。

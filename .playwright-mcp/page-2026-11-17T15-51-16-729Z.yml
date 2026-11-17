@@ -1,0 +1,46 @@
+- generic [ref=f10e2]:
+  - banner [ref=f10e3]:
+    - link "チームチャットアプリ" [ref=f10e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f10e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f10e6]:
+      - text: UAT User B
+      - button "ログアウト" [ref=f10e8]
+  - generic [ref=f10e9]:
+    - navigation "チャンネル" [ref=f10e10]:
+      - link "UATメンバー管理1118" [ref=f10e12] [cursor=pointer]:
+        - /url: http://localhost/channels/3
+        - text: ▣ UATメンバー管理1118
+      - link "UAT公開1117" [ref=f10e13] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f10e14] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f10e15] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f10e16]:
+      - generic [ref=f10e17]:
+        - generic [ref=f10e18]:
+          - generic [ref=f10e19]:
+            - heading "UATメンバー管理1118" [level=1] [ref=f10e20]: ▣ UATメンバー管理1118
+            - paragraph [ref=f10e21]: "Issue #4 受け入れ確認用"
+          - text: プライベート
+        - generic [ref=f10e22]:
+          - generic [ref=f10e23]:
+            - term [ref=f10e24]: 作成者
+            - definition [ref=f10e25]: UAT User A
+          - generic [ref=f10e26]:
+            - term [ref=f10e27]: 公開範囲
+            - definition [ref=f10e28]: プライベート
+        - link "チャンネル一覧へ戻る" [ref=f10e30] [cursor=pointer]:
+          - /url: http://localhost/channels
+        - region "メッセージ" [ref=f10e31]:
+          - paragraph [ref=f10e33]: メッセージはまだありません。
+          - generic [ref=f10e34]:
+            - generic [ref=f10e35]:
+              - generic [ref=f10e36]: メッセージ
+              - textbox "メッセージ" [ref=f10e37]:
+                - /placeholder: "#UATメンバー管理1118 にメッセージを送る"
+              - generic [ref=f10e38]: 1,000文字以内で入力してください。
+            - button "送信" [ref=f10e41] [cursor=pointer]
