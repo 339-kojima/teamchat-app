@@ -1,0 +1,53 @@
+- generic [ref=f17e2]:
+  - banner [ref=f17e3]:
+    - link "チームチャットアプリ" [ref=f17e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f17e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f17e6]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f17e8]
+  - generic [ref=f17e9]:
+    - navigation "チャンネル" [ref=f17e10]:
+      - link "UAT公開1117" [ref=f17e12] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "UAT編集後1117" [ref=f17e13] [cursor=pointer]:
+        - /url: http://localhost/channels/2
+        - text: ▣ UAT編集後1117
+      - link "チャンネル一覧を見る" [ref=f17e14] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f17e15] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f17e16]:
+      - generic [ref=f17e17]:
+        - heading "チャンネルを編集する" [level=1] [ref=f17e18]
+        - generic [ref=f17e19]:
+          - generic [ref=f17e20]:
+            - generic [ref=f17e21]: チャンネル名*
+            - textbox "チャンネル名*" [ref=f17e22]: UAT編集後1117
+            - generic [ref=f17e23]: プライベートチャンネルです。公開範囲はあとから変更できません。
+          - generic [ref=f17e25]:
+            - generic [ref=f17e26]: 説明
+            - textbox "説明" [ref=f17e27]: 名前・説明編集と公開範囲固定を確認
+            - generic [ref=f17e28]:
+              - generic [ref=f17e29]: 200文字以内で入力してください。
+              - generic [ref=f17e30]: 200文字以内
+          - generic [ref=f17e31]:
+            - link "キャンセル" [ref=f17e32] [cursor=pointer]:
+              - /url: http://localhost/channels/2
+            - button "保存する" [ref=f17e33] [cursor=pointer]
+        - generic [ref=f17e34]:
+          - heading "チャンネルを削除する" [level=2] [ref=f17e35]
+          - generic [ref=f17e36]:
+            - strong [ref=f17e37]: このチャンネルを削除します
+            - paragraph [ref=f17e38]: メッセージと返信もすべて削除され、元に戻せません。
+          - generic [ref=f17e39]:
+            - generic [ref=f17e40]:
+              - generic [ref=f17e41]: 「UAT編集後1117」を削除します。確認のためチャンネル名を入力してください。
+              - textbox "「UAT編集後1117」を削除します。確認のためチャンネル名を入力してください。" [ref=f17e42]:
+                - /placeholder: UAT編集後1117
+            - generic [ref=f17e43]:
+              - link "やめる" [ref=f17e44] [cursor=pointer]:
+                - /url: http://localhost/channels/2
+              - button "削除する" [ref=f17e45] [cursor=pointer]

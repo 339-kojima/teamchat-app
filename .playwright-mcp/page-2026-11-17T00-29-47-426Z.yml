@@ -1,0 +1,44 @@
+- generic [ref=f10e2]:
+  - banner [ref=f10e3]:
+    - link "チームチャットアプリ" [ref=f10e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f10e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f10e6]:
+      - text: UAT User B
+      - button "ログアウト" [ref=f10e8]
+  - generic [ref=f10e9]:
+    - navigation "チャンネル" [ref=f10e10]:
+      - link "UAT公開1117" [ref=f10e12] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f10e13] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f10e14] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f10e15]:
+      - generic [ref=f10e16]:
+        - heading "チャンネルを作る" [level=1] [ref=f10e17]
+        - generic [ref=f10e18]:
+          - generic [ref=f10e19]:
+            - generic [ref=f10e20]: チャンネル名*
+            - textbox "チャンネル名*" [ref=f10e21]
+            - generic [ref=f10e22]: 50文字以内で入力してください。
+          - generic [ref=f10e24]:
+            - generic [ref=f10e25]: 説明
+            - textbox "説明" [ref=f10e26]
+            - generic [ref=f10e27]:
+              - generic [ref=f10e28]: 何について話す場所かを短く書きます。
+              - generic [ref=f10e29]: 200文字以内
+          - group "公開範囲*" [ref=f10e30]:
+            - generic [ref=f10e32]:
+              - generic [ref=f10e33]:
+                - radio "公開 ログインしている社員なら誰でも読み書きできます。" [checked] [ref=f10e34]
+                - generic [ref=f10e35]: 公開 ログインしている社員なら誰でも読み書きできます。
+              - generic [ref=f10e36]:
+                - radio "プライベート 追加された人だけが読み書きできます。作成者がメンバーを管理します。" [ref=f10e37]
+                - generic [ref=f10e38]: プライベート 追加された人だけが読み書きできます。作成者がメンバーを管理します。
+          - generic [ref=f10e39]:
+            - link "キャンセル" [ref=f10e40] [cursor=pointer]:
+              - /url: http://localhost/channels
+            - button "作成する" [ref=f10e41] [cursor=pointer]

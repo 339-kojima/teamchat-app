@@ -1,0 +1,46 @@
+- generic [ref=f11e2]:
+  - banner [ref=f11e3]:
+    - link "チームチャットアプリ" [ref=f11e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f11e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f11e6]:
+      - text: UAT User B
+      - button "ログアウト" [ref=f11e8]
+  - generic [ref=f11e9]:
+    - navigation "チャンネル" [ref=f11e10]:
+      - link "UAT公開1117" [ref=f11e12] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f11e13] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f11e14] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f11e15]:
+      - generic [ref=f11e16]:
+        - heading "チャンネルを作る" [level=1] [ref=f11e17]
+        - generic [ref=f11e18]:
+          - generic [ref=f11e19]:
+            - generic [ref=f11e20]: チャンネル名*
+            - textbox "チャンネル名*" [invalid] [ref=f11e21]: UAT公開1117
+            - generic [ref=f11e23]:
+              - generic [aria-hidden] [ref=f11e24]: "!"
+              - text: 同じ公開範囲に同じ名前のチャンネルがあります
+          - generic [ref=f11e25]:
+            - generic [ref=f11e26]: 説明
+            - textbox "説明" [ref=f11e27]
+            - generic [ref=f11e28]:
+              - generic [ref=f11e29]: 何について話す場所かを短く書きます。
+              - generic [ref=f11e30]: 200文字以内
+          - group "公開範囲*" [ref=f11e31]:
+            - generic [ref=f11e33]:
+              - generic [ref=f11e34]:
+                - radio "公開 ログインしている社員なら誰でも読み書きできます。" [checked] [ref=f11e35]
+                - generic [ref=f11e36]: 公開 ログインしている社員なら誰でも読み書きできます。
+              - generic [ref=f11e37]:
+                - radio "プライベート 追加された人だけが読み書きできます。作成者がメンバーを管理します。" [ref=f11e38]
+                - generic [ref=f11e39]: プライベート 追加された人だけが読み書きできます。作成者がメンバーを管理します。
+          - generic [ref=f11e40]:
+            - link "キャンセル" [ref=f11e41] [cursor=pointer]:
+              - /url: http://localhost/channels
+            - button "作成する" [ref=f11e42] [cursor=pointer]

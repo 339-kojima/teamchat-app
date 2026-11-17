@@ -1,0 +1,27 @@
+- generic [ref=f3e2]:
+  - banner [ref=f3e3]:
+    - link "チームチャットアプリ" [ref=f3e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f3e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f3e6]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f3e8]
+  - generic [ref=f3e9]:
+    - navigation "チャンネル" [ref=f3e10]:
+      - paragraph [ref=f3e12]: チャンネルはまだありません。
+      - link "チャンネル一覧を見る" [ref=f3e13] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f3e14] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f3e15]:
+      - generic [ref=f3e16]:
+        - generic [ref=f3e17]:
+          - generic [ref=f3e18]:
+            - heading "チャンネル一覧" [level=1] [ref=f3e19]
+            - paragraph [ref=f3e20]: 公開チャンネルは、ログインしている社員なら誰でも読み書きできます。
+          - link "＋ チャンネルを作る" [ref=f3e21] [cursor=pointer]:
+            - /url: http://localhost/channels/create
+        - region "チャンネル一覧" [ref=f3e22]:
+          - heading "チャンネルはまだありません。" [level=2] [ref=f3e23]
+          - paragraph [ref=f3e24]: チャンネルを作ると、ここに表示されます。

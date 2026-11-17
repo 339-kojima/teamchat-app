@@ -1,0 +1,48 @@
+- generic [ref=f16e2]:
+  - banner [ref=f16e3]:
+    - link "チームチャットアプリ" [ref=f16e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f16e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f16e6]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f16e8]
+  - generic [ref=f16e9]:
+    - navigation "チャンネル" [ref=f16e10]:
+      - link "UAT公開1117" [ref=f16e12] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "UAT編集後1117" [ref=f16e13] [cursor=pointer]:
+        - /url: http://localhost/channels/2
+        - text: ▣ UAT編集後1117
+      - link "チャンネル一覧を見る" [ref=f16e14] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f16e15] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f16e16]:
+      - generic [ref=f16e17]:
+        - generic [ref=f16e18]:
+          - generic [ref=f16e19]:
+            - heading "チャンネル一覧" [level=1] [ref=f16e20]
+            - paragraph [ref=f16e21]: 公開チャンネルは、ログインしている社員なら誰でも読み書きできます。
+          - link "＋ チャンネルを作る" [ref=f16e22] [cursor=pointer]:
+            - /url: http://localhost/channels/create
+        - generic [ref=f16e23]:
+          - article [ref=f16e24]:
+            - generic [ref=f16e25]:
+              - heading "UAT公開1117 公開" [level=2] [ref=f16e26]: "# UAT公開1117 公開"
+              - paragraph [ref=f16e27]: 公開範囲の受け入れ確認 · 作成者：UAT User A
+            - generic [ref=f16e28]:
+              - link "編集" [ref=f16e29] [cursor=pointer]:
+                - /url: http://localhost/channels/1/edit
+              - link "開く" [ref=f16e30] [cursor=pointer]:
+                - /url: http://localhost/channels/1
+          - article [ref=f16e31]:
+            - generic [ref=f16e32]:
+              - heading "UAT編集後1117 プライベート" [level=2] [ref=f16e33]: ▣ UAT編集後1117 プライベート
+              - paragraph [ref=f16e34]: 名前・説明編集と公開範囲固定を確認 · 作成者：UAT User A
+            - generic [ref=f16e35]:
+              - link "編集" [ref=f16e36] [cursor=pointer]:
+                - /url: http://localhost/channels/2/edit
+              - link "開く" [ref=f16e37] [cursor=pointer]:
+                - /url: http://localhost/channels/2
