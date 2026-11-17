@@ -750,3 +750,113 @@ a:hover {
 .channel-detail__actions {
     justify-content: flex-start;
 }
+
+.message-section {
+    margin-top: var(--sp-6);
+}
+
+.message-list {
+    border: var(--border);
+    border-radius: var(--r-lg);
+    background: var(--surface);
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--sp-3);
+    padding: var(--sp-4) var(--sp-5);
+    border-bottom: var(--border);
+}
+
+.message:last-child {
+    border-bottom: 0;
+}
+
+.message__avatar {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #EEF3F9;
+    color: var(--accent);
+    font-weight: var(--fw-bold);
+}
+
+.message__content {
+    min-width: 0;
+    flex: 1;
+}
+
+.message__heading {
+    display: flex;
+    align-items: baseline;
+    gap: var(--sp-3);
+}
+
+.message__heading time {
+    color: var(--text-muted);
+    font-size: var(--fs-caption);
+}
+
+.message__body,
+.message__deleted {
+    margin: var(--sp-1) 0 0;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+.message__edited,
+.message__replies {
+    color: var(--text-muted);
+    font-size: var(--fs-caption);
+}
+
+.message__replies {
+    margin: var(--sp-2) 0 0;
+}
+
+.message__deleted {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.message__actions {
+    display: flex;
+    gap: var(--sp-2);
+}
+
+.message-empty {
+    margin: 0;
+    padding: var(--sp-6);
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.message-composer {
+    margin-top: var(--sp-4);
+    padding: var(--sp-4);
+    border: var(--border);
+    border-radius: var(--r-lg);
+    background: var(--surface);
+}
+
+.message-composer .field {
+    margin-bottom: 0;
+}
+
+.message-composer__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: var(--sp-3);
+}
+
+.message--preview {
+    margin-bottom: var(--sp-4);
+    border: var(--border);
+    border-radius: var(--r-md);
+    background: var(--surface);
+}

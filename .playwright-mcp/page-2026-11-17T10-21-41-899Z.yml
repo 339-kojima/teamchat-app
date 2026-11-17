@@ -1,0 +1,35 @@
+- generic [ref=f18e2]:
+  - banner [ref=f18e3]:
+    - link "チームチャットアプリ" [ref=f18e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f18e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f18e6]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f18e8]
+  - generic [ref=f18e9]:
+    - navigation "チャンネル" [ref=f18e10]:
+      - link "UAT公開1117" [ref=f18e12] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f18e13] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f18e14] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f18e15]:
+      - generic [ref=f18e16]:
+        - heading "メッセージの削除確認" [level=1] [ref=f18e17]
+        - paragraph [ref=f18e18]: "#UAT公開1117"
+        - generic [ref=f18e19]:
+          - generic [ref=f18e20]:
+            - strong [ref=f18e21]: このメッセージを削除します
+            - paragraph [ref=f18e22]: 本文は削除済み表示に変わります。投稿者・投稿時刻・返信は残ります。
+          - generic [ref=f18e24]:
+            - generic [ref=f18e25]:
+              - strong [ref=f18e26]: UAT User A
+              - time [ref=f18e27]: 2026/11/17 10:20
+            - paragraph [ref=f18e28]: UAT AC-4-3 delete parent
+          - generic [ref=f18e30]:
+            - link "やめる" [ref=f18e31] [cursor=pointer]:
+              - /url: http://localhost/channels/1
+            - button "削除する" [ref=f18e32] [cursor=pointer]

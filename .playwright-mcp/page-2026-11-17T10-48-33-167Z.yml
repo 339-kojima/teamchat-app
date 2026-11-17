@@ -1,0 +1,64 @@
+- generic [ref=f28e2]:
+  - banner [ref=f28e3]:
+    - link "チームチャットアプリ" [ref=f28e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f28e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f28e6]:
+      - text: UAT User B
+      - button "ログアウト" [ref=f28e8]
+  - generic [ref=f28e9]:
+    - navigation "チャンネル" [ref=f28e10]:
+      - link "UAT公開1117" [ref=f28e12] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f28e13] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f28e14] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f28e15]:
+      - generic [ref=f28e16]:
+        - generic [ref=f28e17]:
+          - generic [ref=f28e18]:
+            - heading "UAT公開1117" [level=1] [ref=f28e19]: "# UAT公開1117"
+            - paragraph [ref=f28e20]: 公開範囲の受け入れ確認
+          - text: 公開
+        - generic [ref=f28e21]:
+          - generic [ref=f28e22]:
+            - term [ref=f28e23]: 作成者
+            - definition [ref=f28e24]: UAT User A
+          - generic [ref=f28e25]:
+            - term [ref=f28e26]: 公開範囲
+            - definition [ref=f28e27]: 公開
+        - link "チャンネル一覧へ戻る" [ref=f28e29] [cursor=pointer]:
+          - /url: http://localhost/channels
+        - region "メッセージ" [ref=f28e30]:
+          - generic [ref=f28e31]:
+            - article [ref=f28e32]:
+              - generic [aria-hidden] [ref=f28e33]: U
+              - generic [ref=f28e34]:
+                - generic [ref=f28e35]:
+                  - strong [ref=f28e36]: UAT User A
+                  - time [ref=f28e37]: 2026/11/17 10:07
+                - paragraph [ref=f28e38]: UAT AC-4-2 edited message 編集済み
+            - article [ref=f28e39]:
+              - generic [aria-hidden] [ref=f28e40]: U
+              - generic [ref=f28e41]:
+                - generic [ref=f28e42]:
+                  - strong [ref=f28e43]: UAT User A
+                  - time [ref=f28e44]: 2026/11/17 10:08
+                - paragraph [ref=f28e45]: UAT AC-4-2 inline edit fixed 編集済み
+            - article [ref=f28e46]:
+              - generic [aria-hidden] [ref=f28e47]: U
+              - generic [ref=f28e48]:
+                - generic [ref=f28e49]:
+                  - strong [ref=f28e50]: UAT User A
+                  - time [ref=f28e51]: 2026/11/17 10:20
+                - paragraph [ref=f28e52]: このメッセージは削除されました
+          - generic [ref=f28e53]:
+            - generic [ref=f28e54]:
+              - generic [ref=f28e55]: メッセージ
+              - textbox "メッセージ" [ref=f28e56]:
+                - /placeholder: "#UAT公開1117 にメッセージを送る"
+              - generic [ref=f28e57]: 1,000文字以内で入力してください。
+            - button "送信" [ref=f28e60] [cursor=pointer]

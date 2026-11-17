@@ -57,9 +57,11 @@ F-10 と F-11 の記号は、機能の入口を使えるかどうかを示すだ
 | POST | `/channels/{channel}/members` | 必要・プライベートチャンネル作成者 | 指定ユーザーを追加 |
 | DELETE | `/channels/{channel}/members/{user}` | 必要・プライベートチャンネル作成者 | 指定メンバーを削除。作成者は削除対象にできない |
 | POST | `/channels/{channel}/messages` | 必要・閲覧権限 | チャンネルへのメッセージ投稿 |
-| PUT | `/messages/{message}` | 必要・投稿者本人 | メッセージまたは返信をその場編集 |
-| DELETE | `/messages/{message}` | 必要・投稿者本人 | 論理削除（`body = NULL`, `deleted_at` 設定） |
-| GET | `/messages/{message}/thread` | 必要・閲覧権限 | チャンネル投稿を親とするスレッドと返信を表示 |
+| GET | `/channels/{channel}?edit={message}` | 必要・投稿者本人かつチャンネル閲覧権限 | 同じチャンネル画面を再表示し、対象メッセージ位置に編集欄を表示 |
+| GET | `/messages/{message}/delete` | 必要・投稿者本人かつチャンネル閲覧権限 | メッセージまたは返信の削除確認画面 |
+| PUT | `/messages/{message}` | 必要・投稿者本人かつチャンネル閲覧権限 | メッセージまたは返信を編集し、チャンネル画面へ戻る |
+| DELETE | `/messages/{message}` | 必要・投稿者本人かつチャンネル閲覧権限 | 論理削除（`body = NULL`, `deleted_at` 設定）し、チャンネル画面へ戻る |
+| GET | `/messages/{message}/thread` | 必要・閲覧権限。編集時は返信の投稿者本人 | チャンネル投稿を親とするスレッドと返信を表示。`?edit={reply}` で対象返信位置に編集欄を表示 |
 | POST | `/messages/{message}/replies` | 必要・閲覧権限 | チャンネル投稿への返信。返信への返信は不可 |
 | GET | `/search?q={keyword}` | 必要 | 閲覧可能なチャンネルのメッセージ本文と返信本文を検索 |
 
