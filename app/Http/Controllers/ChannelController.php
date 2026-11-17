@@ -53,11 +53,35 @@ class ChannelController extends Controller
         return redirect()->route('channels.index');
     }
 
-    public function show(Channel $channel): View
+    public function show(Request $request, Channel $channel): View
     {
         $this->authorize('view', $channel);
 
-        return $this->page('channels.show', ['channel' => $channel->load('owner')]);
+        $editingMessage = null;
+
+        if ($request->filled('edit')) {
+            $editingMessage = $channel->messages()
+                ->whereNull('parent_id')
+                ->whereKey($request->query('edit'))
+                ->firstOrFail();
+
+            $this->authorize('update', $editingMessage);
+        }
+
+        $channel->load('owner');
+        $messages = $channel->messages()
+            ->whereNull('parent_id')
+            ->with('author')
+            ->withCount('replies')
+            ->orderBy('created_at')
+            ->orderBy('id')
+            ->get();
+
+        return $this->page('channels.show', [
+            'channel' => $channel,
+            'messages' => $messages,
+            'editingMessage' => $editingMessage,
+        ]);
     }
 
     public function edit(Channel $channel): View
