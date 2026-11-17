@@ -1,0 +1,50 @@
+- generic [ref=f13e2]:
+  - banner [ref=f13e3]:
+    - link "チームチャットアプリ" [ref=f13e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f13e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f13e6]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f13e8]
+  - generic [ref=f13e9]:
+    - navigation "チャンネル" [ref=f13e10]:
+      - link "UATメンバー管理1118" [ref=f13e12] [cursor=pointer]:
+        - /url: http://localhost/channels/3
+        - text: ▣ UATメンバー管理1118
+      - link "UAT公開1117" [ref=f13e13] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f13e14] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f13e15] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f13e16]:
+      - generic [ref=f13e17]:
+        - generic [ref=f13e18]:
+          - generic [ref=f13e19]:
+            - heading "チャンネル一覧" [level=1] [ref=f13e20]
+            - paragraph [ref=f13e21]: 公開チャンネルは、ログインしている社員なら誰でも読み書きできます。
+          - link "＋ チャンネルを作る" [ref=f13e22] [cursor=pointer]:
+            - /url: http://localhost/channels/create
+        - generic [ref=f13e23]:
+          - article [ref=f13e24]:
+            - generic [ref=f13e25]:
+              - heading "UATメンバー管理1118 プライベート" [level=2] [ref=f13e26]: ▣ UATメンバー管理1118 プライベート
+              - paragraph [ref=f13e27]: "Issue #4 受け入れ確認用 · 作成者：UAT User A"
+            - generic [ref=f13e28]:
+              - link "編集" [ref=f13e29] [cursor=pointer]:
+                - /url: http://localhost/channels/3/edit
+              - link "メンバー管理" [ref=f13e30] [cursor=pointer]:
+                - /url: http://localhost/channels/3/members
+              - link "開く" [ref=f13e31] [cursor=pointer]:
+                - /url: http://localhost/channels/3
+          - article [ref=f13e32]:
+            - generic [ref=f13e33]:
+              - heading "UAT公開1117 公開" [level=2] [ref=f13e34]: "# UAT公開1117 公開"
+              - paragraph [ref=f13e35]: 公開範囲の受け入れ確認 · 作成者：UAT User A
+            - generic [ref=f13e36]:
+              - link "編集" [ref=f13e37] [cursor=pointer]:
+                - /url: http://localhost/channels/1/edit
+              - link "開く" [ref=f13e38] [cursor=pointer]:
+                - /url: http://localhost/channels/1
