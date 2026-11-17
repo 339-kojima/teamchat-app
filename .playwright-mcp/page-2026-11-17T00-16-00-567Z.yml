@@ -1,0 +1,650 @@
+- generic [ref=f2e2]:
+  - navigation [ref=f2e3]:
+    - generic [ref=f2e4]:
+      - generic [ref=f2e6]:
+        - list [ref=f2e7]:
+          - listitem [ref=f2e8]:
+            - link [ref=f2e9] [cursor=pointer]:
+              - /url: "#stack"
+              - button "Stack" [ref=f2e10]
+          - listitem [ref=f2e14]:
+            - link [ref=f2e15] [cursor=pointer]:
+              - /url: "#context"
+              - button "Context" [ref=f2e16]
+          - listitem [ref=f2e20]:
+            - link [ref=f2e21] [cursor=pointer]:
+              - /url: "#debug"
+              - button "Debug" [ref=f2e22]
+          - listitem [ref=f2e26]:
+            - link [ref=f2e27] [cursor=pointer]:
+              - /url: https://flareapp.io/?utm_campaign=ignition&utm_source=ignition
+              - button "Flare" [ref=f2e28]
+        - list [ref=f2e35]:
+          - listitem [ref=f2e36]:
+            - link [ref=f2e37] [cursor=pointer]:
+              - /url: "#share"
+              - button "Share" [ref=f2e38]
+            - generic:
+              - generic:
+                - generic:
+                  - heading "Share with Flare" [level=4]
+                  - link "Docs":
+                    - /url: https://flareapp.io/docs/ignition/introducing-ignition/sharing-errors?utm_campaign=ignition&utm_source=ignition
+                - list:
+                  - listitem:
+                    - generic:
+                      - checkbox "Stack" [checked]
+                      - generic: Stack
+                  - listitem:
+                    - generic:
+                      - checkbox "Context" [checked]
+                      - generic: Context
+                  - listitem:
+                    - generic:
+                      - checkbox "Debug" [checked]
+                      - generic: Debug
+                - generic:
+                  - button "Create Share"
+          - listitem [ref=f2e42]:
+            - link [ref=f2e43] [cursor=pointer]:
+              - /url: https://laravel.com/docs/10.x/eloquent
+              - button "Docs" [ref=f2e44]
+          - listitem [ref=f2e49]:
+            - link [ref=f2e50] [cursor=pointer]:
+              - /url: "#settings"
+              - button [ref=f2e51]
+            - generic:
+              - generic:
+                - generic:
+                  - heading "Ignition Settings" [level=4]
+                  - link "Docs":
+                    - /url: https://flareapp.io/ignition?utm_campaign=ignition&utm_source=ignition
+                - generic:
+                  - text: Editor
+                  - generic:
+                    - combobox "Editor":
+                      - option "Clipboard"
+                      - option "Sublime"
+                      - option "TextMate"
+                      - option "Emacs"
+                      - option "MacVim"
+                      - option "PhpStorm" [selected]
+                      - option "PHPStorm Remote"
+                      - option "Idea"
+                      - option "VS Code"
+                      - option "VS Code Insiders"
+                      - option "VS Code Remote"
+                      - option "VS Code Insiders Remote"
+                      - option "VS Codium"
+                      - option "Cursor"
+                      - option "Atom"
+                      - option "Nova"
+                      - option "NetBeans"
+                      - option "Zed"
+                      - option "Windsurf"
+                      - option "Xdebug"
+                - generic:
+                  - text: Theme
+                  - button "auto"
+                - generic:
+                  - button "Save settings"
+                - paragraph:
+                  - text: Settings will be saved locally in
+                  - code: ~/.ignition.json
+                  - text: .
+      - 'link "SQLSTATE[42S02]: Base table or view not found: 1146 Table ''laravel.channels'' doesn''t exist (Connection: mysql, SQL: select * from `channels` where (`is_private` = 0 or `owner_id` = 1 or exists (select * from `users` inner join `channel_user` on `users`.`id` = `channel_user`.`user_id` where `channels`.`id` = `channel_user`.`channel_id` and `users`.`id` = 1)) order by `name` asc)" [ref=f2e57] [cursor=pointer]':
+        - /url: "#top"
+  - main [ref=f2e59]:
+    - generic [ref=f2e62]:
+      - main [ref=f2e63]:
+        - generic [ref=f2e65]:
+          - generic [ref=f2e66]:
+            - generic [ref=f2e68]:
+              - generic [ref=f2e69]: Illuminate
+              - generic [ref=f2e70]: \
+              - generic [ref=f2e71]: Database
+              - generic [ref=f2e72]: \
+              - generic [ref=f2e73]: QueryException
+            - generic [ref=f2e74]:
+              - generic [ref=f2e75]: PHP 8.5.8
+              - generic [ref=f2e76]: 10.50.3
+          - generic [ref=f2e79]: "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravel.channels' doesn't exist"
+          - generic [ref=f2e81] [cursor=pointer]:
+            - code [ref=f2e84]:
+              - code [ref=f2e86]: "select * from `channels` where (`is_private` = 0 or `owner_id` = 1 or exists (select * from `users` inner join `channel_user` on `users`.`id` = `channel_user`.`user_id` where `channels`.`id` = `channel_user`.`channel_id` and `users`.`id` = 1)) order by `name` asc"
+            - button "Copy to clipboard" [ref=f2e88]
+            - button [ref=f2e91]
+      - complementary [ref=f2e94]:
+        - generic [ref=f2e95]:
+          - button [ref=f2e96] [cursor=pointer]
+          - generic [ref=f2e100]:
+            - heading "A table was not found" [level=2] [ref=f2e102]
+            - generic [ref=f2e103]:
+              - button "Run migrations" [ref=f2e104] [cursor=pointer]
+              - generic [ref=f2e107]:
+                - paragraph [ref=f2e108]: You might have forgotten to run your database migrations.
+                - paragraph [ref=f2e109]: "You can try to run your migrations using `php artisan migrate`."
+                - list [ref=f2e110]:
+                  - listitem [ref=f2e111]:
+                    - 'link "Database: Running Migrations docs" [ref=f2e112] [cursor=pointer]':
+                      - /url: https://laravel.com/docs/master/migrations#running-migrations
+    - generic [ref=f2e115]:
+      - complementary [ref=f2e116]:
+        - generic [ref=f2e117]:
+          - button "Expand vendor frames" [ref=f2e119] [cursor=pointer]
+          - list [ref=f2e126]:
+            - listitem [ref=f2e127] [cursor=pointer]: 9 vendor frames
+            - listitem [ref=f2e130]:
+              - generic [ref=f2e132]:
+                - generic [ref=f2e133]: App
+                - generic [ref=f2e134]: \
+                - generic [ref=f2e135]: Http
+                - generic [ref=f2e136]: \
+                - generic [ref=f2e137]: Controllers
+                - generic [ref=f2e138]: \
+                - generic [ref=f2e139]: ChannelController
+                - generic [ref=f2e140]: ": 19"
+              - generic [ref=f2e141]: index
+            - listitem [ref=f2e142]
+            - listitem [ref=f2e143] [cursor=pointer]: 45 vendor frames
+            - listitem [ref=f2e146] [cursor=pointer]:
+              - generic [ref=f2e148]:
+                - generic [ref=f2e149]: public
+                - generic [ref=f2e150]: /
+                - generic [ref=f2e151]: index
+                - generic [ref=f2e152]: .php
+                - generic [ref=f2e153]: ": 51"
+              - generic [ref=f2e154]: require_once
+            - listitem [ref=f2e155] [cursor=pointer]: 1 vendor frame
+      - generic [ref=f2e158]:
+        - 'link "app / Http / Controllers / ChannelController .php : 19" [ref=f2e160] [cursor=pointer]':
+          - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=19
+          - generic [ref=f2e161]:
+            - generic [ref=f2e162]: app
+            - generic [ref=f2e163]: /
+            - generic [ref=f2e164]: Http
+            - generic [ref=f2e165]: /
+            - generic [ref=f2e166]: Controllers
+            - generic [ref=f2e167]: /
+            - generic [ref=f2e168]: ChannelController
+            - generic [ref=f2e169]: .php
+            - generic [ref=f2e170]: ": 19"
+        - main [ref=f2e171]:
+          - navigation [ref=f2e172]:
+            - generic [ref=f2e173]:
+              - paragraph [ref=f2e174]: "4"
+              - paragraph [ref=f2e175]: "5"
+              - paragraph [ref=f2e176]: "6"
+              - paragraph [ref=f2e177]: "7"
+              - paragraph [ref=f2e178]: "8"
+              - paragraph [ref=f2e179]: "9"
+              - paragraph [ref=f2e180]: "10"
+              - paragraph [ref=f2e181]: "11"
+              - paragraph [ref=f2e182]: "12"
+              - paragraph [ref=f2e183]: "13"
+              - paragraph [ref=f2e184]: "14"
+              - paragraph [ref=f2e185]: "15"
+              - paragraph [ref=f2e186]: "16"
+              - paragraph [ref=f2e187]: "17"
+              - paragraph [ref=f2e188]: "18"
+              - paragraph [ref=f2e189]: "19"
+              - paragraph [ref=f2e190]: "20"
+              - paragraph [ref=f2e191]: "21"
+              - paragraph [ref=f2e192]: "22"
+              - paragraph [ref=f2e193]: "23"
+              - paragraph [ref=f2e194]: "24"
+              - paragraph [ref=f2e195]: "25"
+              - paragraph [ref=f2e196]: "26"
+              - paragraph [ref=f2e197]: "27"
+              - paragraph [ref=f2e198]: "28"
+              - paragraph [ref=f2e199]: "29"
+              - paragraph [ref=f2e200]: "30"
+              - paragraph [ref=f2e201]: "31"
+              - paragraph [ref=f2e202]: "32"
+              - paragraph [ref=f2e203]: "33"
+          - code [ref=f2e206]:
+            - link [ref=f2e208] [cursor=pointer]:
+              - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=4
+              - button [ref=f2e209]
+            - generic [ref=f2e213]:
+              - link [ref=f2e214] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=5
+                - button [ref=f2e215]
+              - generic [ref=f2e218]: use App\Models\Channel;
+            - generic [ref=f2e220]:
+              - link [ref=f2e221] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=6
+                - button [ref=f2e222]
+              - generic [ref=f2e225]: use Illuminate\Database\Eloquent\Builder;
+            - generic [ref=f2e227]:
+              - link [ref=f2e228] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=7
+                - button [ref=f2e229]
+              - generic [ref=f2e232]: use Illuminate\Http\RedirectResponse;
+            - generic [ref=f2e234]:
+              - link [ref=f2e235] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=8
+                - button [ref=f2e236]
+              - generic [ref=f2e239]: use Illuminate\Http\Request;
+            - generic [ref=f2e241]:
+              - link [ref=f2e242] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=9
+                - button [ref=f2e243]
+              - generic [ref=f2e246]: use Illuminate\Support\Facades\DB;
+            - generic [ref=f2e248]:
+              - link [ref=f2e249] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=10
+                - button [ref=f2e250]
+              - generic [ref=f2e253]: use Illuminate\Validation\Rule;
+            - generic [ref=f2e255]:
+              - link [ref=f2e256] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=11
+                - button [ref=f2e257]
+              - generic [ref=f2e260]: use Illuminate\View\View;
+            - link [ref=f2e263] [cursor=pointer]:
+              - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=12
+              - button [ref=f2e264]
+            - generic [ref=f2e268]:
+              - link [ref=f2e269] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=13
+                - button [ref=f2e270]
+              - generic [ref=f2e273]: class ChannelController extends Controller
+            - generic [ref=f2e275]:
+              - link [ref=f2e276] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=14
+                - button [ref=f2e277]
+              - generic [ref=f2e280]: "{"
+            - generic [ref=f2e282]:
+              - link [ref=f2e283] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=15
+                - button [ref=f2e284]
+              - generic [ref=f2e287]: "public function index(): View"
+            - generic [ref=f2e289]:
+              - link [ref=f2e290] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=16
+                - button [ref=f2e291]
+              - generic [ref=f2e294]: "{"
+            - generic [ref=f2e296]:
+              - link [ref=f2e297] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=17
+                - button [ref=f2e298]
+              - generic [ref=f2e301]: $this->authorize('viewAny', Channel::class);
+            - link [ref=f2e304] [cursor=pointer]:
+              - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=18
+              - button [ref=f2e305]
+            - generic [ref=f2e309]:
+              - link [ref=f2e310] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=19
+                - button [ref=f2e311]
+              - generic [ref=f2e314]: $channels = $this->visibleChannels()->get();
+            - link [ref=f2e317] [cursor=pointer]:
+              - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=20
+              - button [ref=f2e318]
+            - generic [ref=f2e322]:
+              - link [ref=f2e323] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=21
+                - button [ref=f2e324]
+              - generic [ref=f2e327]: return view('channels.index', [
+            - generic [ref=f2e329]:
+              - link [ref=f2e330] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=22
+                - button [ref=f2e331]
+              - generic [ref=f2e334]: "'channels' => $channels,"
+            - generic [ref=f2e336]:
+              - link [ref=f2e337] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=23
+                - button [ref=f2e338]
+              - generic [ref=f2e341]: "'sidebarChannels' => $channels,"
+            - generic [ref=f2e343]:
+              - link [ref=f2e344] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=24
+                - button [ref=f2e345]
+              - generic [ref=f2e348]: "]);"
+            - generic [ref=f2e349]:
+              - link [ref=f2e350] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=25
+                - button [ref=f2e351]
+              - generic [ref=f2e354]: "}"
+            - link [ref=f2e356] [cursor=pointer]:
+              - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=26
+              - button [ref=f2e357]
+            - generic [ref=f2e361]:
+              - link [ref=f2e362] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=27
+                - button [ref=f2e363]
+              - generic [ref=f2e366]: "public function create(): View"
+            - generic [ref=f2e368]:
+              - link [ref=f2e369] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=28
+                - button [ref=f2e370]
+              - generic [ref=f2e373]: "{"
+            - generic [ref=f2e375]:
+              - link [ref=f2e376] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=29
+                - button [ref=f2e377]
+              - generic [ref=f2e380]: $this->authorize('create', Channel::class);
+            - link [ref=f2e383] [cursor=pointer]:
+              - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=30
+              - button [ref=f2e384]
+            - generic [ref=f2e388]:
+              - link [ref=f2e389] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=31
+                - button [ref=f2e390]
+              - generic [ref=f2e393]: return $this->page('channels.create');
+            - generic [ref=f2e395]:
+              - link [ref=f2e396] [cursor=pointer]:
+                - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=32
+                - button [ref=f2e397]
+              - generic [ref=f2e400]: "}"
+            - link [ref=f2e402] [cursor=pointer]:
+              - /url: phpstorm://open?file=%2Fhome%2Fmisaki%2Flaravel-practice%2Fteamchat-app%2Fapp%2FHttp%2FControllers%2FChannelController.php&line=33
+              - button [ref=f2e403]
+    - generic [ref=f2e408]:
+      - navigation [ref=f2e409]:
+        - list [ref=f2e411]:
+          - listitem [ref=f2e412]:
+            - link "App" [ref=f2e413] [cursor=pointer]:
+              - /url: "#context-app"
+            - list [ref=f2e414]:
+              - listitem [ref=f2e415]:
+                - link "Routing" [ref=f2e416] [cursor=pointer]:
+                  - /url: "#context-app-routing"
+          - listitem [ref=f2e421]:
+            - link "Request" [ref=f2e422] [cursor=pointer]:
+              - /url: "#context-request"
+            - list [ref=f2e423]:
+              - listitem [ref=f2e424]:
+                - link "Browser" [ref=f2e425] [cursor=pointer]:
+                  - /url: "#context-request-browser"
+              - listitem [ref=f2e430]:
+                - link "Headers" [ref=f2e431] [cursor=pointer]:
+                  - /url: "#context-request-headers"
+              - listitem [ref=f2e436]:
+                - link "Body" [ref=f2e437] [cursor=pointer]:
+                  - /url: "#context-request-body"
+          - listitem [ref=f2e442]:
+            - link "Context" [ref=f2e443] [cursor=pointer]:
+              - /url: "#context-context"
+            - list [ref=f2e444]:
+              - listitem [ref=f2e445]:
+                - link "User" [ref=f2e446] [cursor=pointer]:
+                  - /url: "#context-user-user"
+              - listitem [ref=f2e451]:
+                - link "Git" [ref=f2e452] [cursor=pointer]:
+                  - /url: "#context-context-git"
+              - listitem [ref=f2e457]:
+                - link "Versions" [ref=f2e458] [cursor=pointer]:
+                  - /url: "#context-context-versions"
+              - listitem [ref=f2e463]:
+                - link "Exception" [ref=f2e464] [cursor=pointer]:
+                  - /url: "#context-context-exception"
+      - generic [ref=f2e469]:
+        - generic [ref=f2e470]:
+          - heading "App" [level=2] [ref=f2e471]
+          - generic [ref=f2e473]:
+            - heading "Routing" [level=1] [ref=f2e474]
+            - generic [ref=f2e478]:
+              - generic [ref=f2e479]:
+                - term [ref=f2e480]: Controller
+                - definition [ref=f2e481]:
+                  - generic [ref=f2e482]:
+                    - code [ref=f2e485]: App\Http\Controllers\ChannelController@index
+                    - button "Copy to clipboard" [ref=f2e487] [cursor=pointer]
+              - generic [ref=f2e490]:
+                - term [ref=f2e491]: Route name
+                - definition [ref=f2e492]:
+                  - generic [ref=f2e493]:
+                    - code [ref=f2e496]: channels.index
+                    - button "Copy to clipboard" [ref=f2e498] [cursor=pointer]
+              - generic [ref=f2e501]:
+                - term [ref=f2e502]: Middleware
+                - definition [ref=f2e503]:
+                  - list [ref=f2e504]:
+                    - listitem [ref=f2e505]:
+                      - generic [ref=f2e506]:
+                        - code [ref=f2e509]: web
+                        - button "Copy to clipboard" [ref=f2e511] [cursor=pointer]
+                    - listitem [ref=f2e514]:
+                      - generic [ref=f2e515]:
+                        - code [ref=f2e518]: auth
+                        - button "Copy to clipboard" [ref=f2e520] [cursor=pointer]
+        - generic [ref=f2e523]:
+          - heading "Request" [level=2] [ref=f2e524]
+          - generic [ref=f2e525]:
+            - generic [ref=f2e526]:
+              - generic [ref=f2e527]:
+                - generic [ref=f2e528]: http://localhost/channels
+                - generic [ref=f2e529]: GET
+              - generic [ref=f2e531] [cursor=pointer]:
+                - code [ref=f2e534]:
+                  - code [ref=f2e536]: "curl \"http://localhost/channels\" \\ -X GET \\ -H 'host: localhost' \\ -H 'connection: keep-alive' \\ -H 'cache-control: max-age=0' \\ -H 'upgrade-insecure-requests: 1' \\ -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36' \\ -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \\ -H 'sec-fetch-site: same-origin' \\ -H 'sec-fetch-mode: navigate' \\ -H 'sec-fetch-user: ?1' \\ -H 'sec-fetch-dest: document' \\ -H 'sec-ch-ua: \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\"' \\ -H 'sec-ch-ua-mobile: ?0' \\ -H 'sec-ch-ua-platform: \"Linux\"' \\ -H 'referer: http://localhost/login' \\ -H 'accept-encoding: gzip, deflate, br, zstd' \\ -H 'accept-language: en-US,en;q=0.9' \\ -H 'cookie: <CENSORED>';"
+                - button "Copy to clipboard" [ref=f2e538]
+                - button [ref=f2e541]
+            - generic [ref=f2e544]:
+              - heading "Browser" [level=1] [ref=f2e545]
+              - generic [ref=f2e549]:
+                - code [ref=f2e552]: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36
+                - button "Copy to clipboard" [ref=f2e554] [cursor=pointer]
+            - generic [ref=f2e557]:
+              - heading "Headers" [level=1] [ref=f2e558]
+              - generic [ref=f2e562]:
+                - generic [ref=f2e563]:
+                  - term [ref=f2e564]: host
+                  - definition [ref=f2e565]:
+                    - generic [ref=f2e566]:
+                      - code [ref=f2e569]: localhost
+                      - button "Copy to clipboard" [ref=f2e571] [cursor=pointer]
+                - generic [ref=f2e574]:
+                  - term [ref=f2e575]: connection
+                  - definition [ref=f2e576]:
+                    - generic [ref=f2e577]:
+                      - code [ref=f2e580]: keep-alive
+                      - button "Copy to clipboard" [ref=f2e582] [cursor=pointer]
+                - generic [ref=f2e585]:
+                  - term [ref=f2e586]: cache-control
+                  - definition [ref=f2e587]:
+                    - generic [ref=f2e588]:
+                      - code [ref=f2e591]: max-age=0
+                      - button "Copy to clipboard" [ref=f2e593] [cursor=pointer]
+                - generic [ref=f2e596]:
+                  - term [ref=f2e597]: upgrade-insecure-requests
+                  - definition [ref=f2e598]:
+                    - generic [ref=f2e599]:
+                      - code [ref=f2e602]: "1"
+                      - button "Copy to clipboard" [ref=f2e604] [cursor=pointer]
+                - generic [ref=f2e607]:
+                  - term [ref=f2e608]: user-agent
+                  - definition [ref=f2e609]:
+                    - generic [ref=f2e610]:
+                      - code [ref=f2e613]: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36
+                      - button "Copy to clipboard" [ref=f2e615] [cursor=pointer]
+                - generic [ref=f2e618]:
+                  - term [ref=f2e619]: accept
+                  - definition [ref=f2e620]:
+                    - generic [ref=f2e621]:
+                      - code [ref=f2e624]: text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+                      - button "Copy to clipboard" [ref=f2e626] [cursor=pointer]
+                - generic [ref=f2e629]:
+                  - term [ref=f2e630]: sec-fetch-site
+                  - definition [ref=f2e631]:
+                    - generic [ref=f2e632]:
+                      - code [ref=f2e635]: same-origin
+                      - button "Copy to clipboard" [ref=f2e637] [cursor=pointer]
+                - generic [ref=f2e640]:
+                  - term [ref=f2e641]: sec-fetch-mode
+                  - definition [ref=f2e642]:
+                    - generic [ref=f2e643]:
+                      - code [ref=f2e646]: navigate
+                      - button "Copy to clipboard" [ref=f2e648] [cursor=pointer]
+                - generic [ref=f2e651]:
+                  - term [ref=f2e652]: sec-fetch-user
+                  - definition [ref=f2e653]:
+                    - generic [ref=f2e654]:
+                      - code [ref=f2e657]: "?1"
+                      - button "Copy to clipboard" [ref=f2e659] [cursor=pointer]
+                - generic [ref=f2e662]:
+                  - term [ref=f2e663]: sec-fetch-dest
+                  - definition [ref=f2e664]:
+                    - generic [ref=f2e665]:
+                      - code [ref=f2e668]: document
+                      - button "Copy to clipboard" [ref=f2e670] [cursor=pointer]
+                - generic [ref=f2e673]:
+                  - term [ref=f2e674]: sec-ch-ua
+                  - definition [ref=f2e675]:
+                    - generic [ref=f2e676]:
+                      - code [ref=f2e679]: "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\""
+                      - button "Copy to clipboard" [ref=f2e681] [cursor=pointer]
+                - generic [ref=f2e684]:
+                  - term [ref=f2e685]: sec-ch-ua-mobile
+                  - definition [ref=f2e686]:
+                    - generic [ref=f2e687]:
+                      - code [ref=f2e690]: "?0"
+                      - button "Copy to clipboard" [ref=f2e692] [cursor=pointer]
+                - generic [ref=f2e695]:
+                  - term [ref=f2e696]: sec-ch-ua-platform
+                  - definition [ref=f2e697]:
+                    - generic [ref=f2e698]:
+                      - code [ref=f2e701]: "\"Linux\""
+                      - button "Copy to clipboard" [ref=f2e703] [cursor=pointer]
+                - generic [ref=f2e706]:
+                  - term [ref=f2e707]: referer
+                  - definition [ref=f2e708]:
+                    - generic [ref=f2e709]:
+                      - code [ref=f2e712]: http://localhost/login
+                      - button "Copy to clipboard" [ref=f2e714] [cursor=pointer]
+                - generic [ref=f2e717]:
+                  - term [ref=f2e718]: accept-encoding
+                  - definition [ref=f2e719]:
+                    - generic [ref=f2e720]:
+                      - code [ref=f2e723]: gzip, deflate, br, zstd
+                      - button "Copy to clipboard" [ref=f2e725] [cursor=pointer]
+                - generic [ref=f2e728]:
+                  - term [ref=f2e729]: accept-language
+                  - definition [ref=f2e730]:
+                    - generic [ref=f2e731]:
+                      - code [ref=f2e734]: en-US,en;q=0.9
+                      - button "Copy to clipboard" [ref=f2e736] [cursor=pointer]
+                - generic [ref=f2e739]:
+                  - term [ref=f2e740]: cookie
+                  - definition [ref=f2e741]:
+                    - generic [ref=f2e742]:
+                      - code [ref=f2e745]: <CENSORED>
+                      - button "Copy to clipboard" [ref=f2e747] [cursor=pointer]
+            - generic [ref=f2e750]:
+              - heading "Body" [level=1] [ref=f2e751]
+              - generic [ref=f2e755]:
+                - code [ref=f2e758]: "[]"
+                - button "Copy to clipboard" [ref=f2e760] [cursor=pointer]
+        - generic [ref=f2e763]:
+          - heading "Context" [level=2] [ref=f2e764]
+          - generic [ref=f2e765]:
+            - generic [ref=f2e766]:
+              - heading "User" [level=1] [ref=f2e767]
+              - generic [ref=f2e771]:
+                - img "usera@example.com" [ref=f2e773]
+                - generic [ref=f2e774]:
+                  - paragraph [ref=f2e775]: UAT User A
+                  - paragraph [ref=f2e776]: usera@example.com
+              - generic [ref=f2e777] [cursor=pointer]:
+                - code [ref=f2e780]:
+                  - code [ref=f2e782]: "{ \"id\": 1, \"name\": \"UAT User A\", \"email\": \"usera@example.com\", \"email_verified_at\": null, \"created_at\": \"2026-11-16T08:32:08.000000Z\", \"updated_at\": \"2026-11-16T08:32:08.000000Z\" }"
+                - button "Copy to clipboard" [ref=f2e784]
+                - button [ref=f2e787]
+            - generic [ref=f2e790]:
+              - heading "Git" [level=1] [ref=f2e791]
+              - generic [ref=f2e795]:
+                - generic [ref=f2e796]: "Merge pull request #8 from 339-kojima/issue/1-authentication"
+                - generic [ref=f2e797]:
+                  - generic [ref=f2e798]:
+                    - code [ref=f2e801]: f93a1d9fac8f44a75db396f1eef81513741febdf
+                    - button "Copy to clipboard" [ref=f2e803] [cursor=pointer]
+                  - link [ref=f2e806] [cursor=pointer]:
+                    - /url: https://github.com/339-kojima/teamchat-app/commit/f93a1d9fac8f44a75db396f1eef81513741febdf
+                    - button "View commit f93a1d9" [ref=f2e807]
+              - paragraph [ref=f2e816]: Last commit is dirty. (Un)staged changes have been made since this commit.
+            - generic [ref=f2e817]:
+              - heading "Versions" [level=1] [ref=f2e818]
+              - generic [ref=f2e822]:
+                - generic [ref=f2e823]:
+                  - term [ref=f2e824]: Php Version
+                  - definition [ref=f2e825]:
+                    - generic [ref=f2e826]:
+                      - code [ref=f2e829]: 8.5.8
+                      - button "Copy to clipboard" [ref=f2e831] [cursor=pointer]
+                - generic [ref=f2e834]:
+                  - term [ref=f2e835]: Laravel Version
+                  - definition [ref=f2e836]:
+                    - generic [ref=f2e837]:
+                      - code [ref=f2e840]: 10.50.3
+                      - button "Copy to clipboard" [ref=f2e842] [cursor=pointer]
+                - generic [ref=f2e845]:
+                  - term [ref=f2e846]: Laravel Locale
+                  - definition [ref=f2e847]:
+                    - generic [ref=f2e848]:
+                      - code [ref=f2e851]: en
+                      - button "Copy to clipboard" [ref=f2e853] [cursor=pointer]
+                - generic [ref=f2e856]:
+                  - term [ref=f2e857]: Laravel Config Cached
+                  - definition [ref=f2e858]:
+                    - generic [ref=f2e859]: "false"
+                - generic [ref=f2e863]:
+                  - term [ref=f2e864]: App Debug
+                  - definition [ref=f2e865]:
+                    - generic [ref=f2e866]: "true"
+                - generic [ref=f2e870]:
+                  - term [ref=f2e871]: App Env
+                  - definition [ref=f2e872]:
+                    - generic [ref=f2e873]:
+                      - code [ref=f2e876]: local
+                      - button "Copy to clipboard" [ref=f2e878] [cursor=pointer]
+            - generic [ref=f2e881]:
+              - heading "Exception" [level=1] [ref=f2e882]
+              - generic [ref=f2e887]:
+                - term [ref=f2e888]: Raw Sql
+                - definition [ref=f2e889]:
+                  - generic [ref=f2e890]:
+                    - code [ref=f2e893]: "select * from `channels` where (`is_private` = ? or `owner_id` = ? or exists (select * from `users` inner join `channel_user` on `users`.`id` = `channel_user`.`user_id` where `channels`.`id` = `channel_user`.`channel_id` and `users`.`id` = ?)) order by `name` asc"
+                    - button "Copy to clipboard" [ref=f2e895] [cursor=pointer]
+    - generic [ref=f2e899]:
+      - navigation:
+        - list [ref=f2e900]:
+          - listitem [ref=f2e901]:
+            - button "1 Queries" [ref=f2e902] [cursor=pointer]:
+              - generic [ref=f2e903]: "1"
+              - generic [ref=f2e904]: Queries
+      - generic [ref=f2e906]:
+        - generic [ref=f2e907]:
+          - generic [ref=f2e908]: 9:15:57 AM
+          - generic [ref=f2e909]:
+            - img "Runtime" [ref=f2e910]
+            - text: 18.07ms
+          - generic [ref=f2e912]:
+            - img "Connection" [ref=f2e913]
+            - text: mysql
+        - generic [ref=f2e916]:
+          - generic [ref=f2e917] [cursor=pointer]:
+            - code [ref=f2e920]:
+              - code [ref=f2e922]: "select * from `users` where `id` = 1 limit 1"
+            - button "Copy to clipboard" [ref=f2e924]
+            - button [ref=f2e927]
+          - button "1 query parameter" [ref=f2e931] [cursor=pointer]
+    - generic [ref=f2e935]:
+      - list [ref=f2e936]:
+        - listitem [ref=f2e937]
+        - listitem [ref=f2e946]: ·
+        - listitem [ref=f2e947]:
+          - link "Source" [ref=f2e948] [cursor=pointer]:
+            - /url: https://github.com/spatie/laravel-ignition
+        - listitem [ref=f2e949]: ·
+        - listitem [ref=f2e950]:
+          - link "Docs" [ref=f2e951] [cursor=pointer]:
+            - /url: https://flareapp.io/docs/ignition/introducing-ignition/overview
+        - listitem [ref=f2e952]: ·
+        - listitem [ref=f2e953]:
+          - link "Laravel" [ref=f2e954] [cursor=pointer]:
+            - /url: https://laravel.com
+      - paragraph [ref=f2e956]:
+        - text: Ignition is built by
+        - link "Flare" [ref=f2e957] [cursor=pointer]:
+          - /url: https://flareapp.io/?utm_campaign=ignition&utm_source=ignition
+        - text: ", the Laravel error reporting service."

@@ -1,0 +1,46 @@
+- generic [ref=f4e2]:
+  - banner [ref=f4e3]:
+    - link "チームチャットアプリ" [ref=f4e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f4e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f4e6]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f4e8]
+  - generic [ref=f4e9]:
+    - navigation "チャンネル" [ref=f4e10]:
+      - link "UAT公開1117" [ref=f4e12] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f4e13] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f4e14] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f4e15]:
+      - generic [ref=f4e16]:
+        - generic [ref=f4e17]:
+          - generic [ref=f4e18]:
+            - heading "UAT公開1117" [level=1] [ref=f4e19]: "# UAT公開1117"
+            - paragraph [ref=f4e20]: 公開範囲の受け入れ確認
+          - text: 公開
+        - generic [ref=f4e21]:
+          - generic [ref=f4e22]:
+            - term [ref=f4e23]: 作成者
+            - definition [ref=f4e24]: UAT User A
+          - generic [ref=f4e25]:
+            - term [ref=f4e26]: 公開範囲
+            - definition [ref=f4e27]: 公開
+        - generic [ref=f4e28]:
+          - link "編集" [ref=f4e29] [cursor=pointer]:
+            - /url: http://localhost/channels/1/edit
+          - link "チャンネル一覧へ戻る" [ref=f4e30] [cursor=pointer]:
+            - /url: http://localhost/channels
+        - region "メッセージ" [ref=f4e31]:
+          - paragraph [ref=f4e33]: メッセージはまだありません。
+          - generic [ref=f4e34]:
+            - generic [ref=f4e35]:
+              - generic [ref=f4e36]: メッセージ
+              - textbox "メッセージ" [ref=f4e37]:
+                - /placeholder: "#UAT公開1117 にメッセージを送る"
+              - generic [ref=f4e38]: 1,000文字以内で入力してください。
+            - button "送信" [ref=f4e41] [cursor=pointer]
