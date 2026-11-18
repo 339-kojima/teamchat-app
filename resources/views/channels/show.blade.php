@@ -87,9 +87,7 @@
                                 @endif
                             @endif
 
-                            @if ($channelMessage->replies_count > 0)
-                                <p class="message__replies">返信{{ $channelMessage->replies_count }}件</p>
-                            @endif
+                            <a class="message__replies" href="{{ route('messages.thread', $channelMessage) }}">返信{{ $channelMessage->replies_count }}件</a>
                         </div>
                     </article>
                 @empty

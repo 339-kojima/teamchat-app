@@ -1,0 +1,53 @@
+- generic [ref=f5e2]:
+  - banner [ref=f5e3]:
+    - link "チームチャットアプリ" [ref=f5e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f5e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f5e6]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f5e8]
+  - generic [ref=f5e9]:
+    - navigation "チャンネル" [ref=f5e10]:
+      - link "UAT公開1117" [ref=f5e12] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f5e13] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f5e14] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f5e15]:
+      - region "スレッド" [ref=f5e16]:
+        - generic [ref=f5e17]:
+          - generic [ref=f5e18]:
+            - heading "スレッド" [level=1] [ref=f5e19]
+            - paragraph [ref=f5e20]: "#UAT公開1117"
+          - link "閉じる" [ref=f5e21] [cursor=pointer]:
+            - /url: http://localhost/channels/1
+        - article [ref=f5e23]:
+          - generic [aria-hidden] [ref=f5e24]: U
+          - generic [ref=f5e25]:
+            - generic [ref=f5e26]:
+              - strong [ref=f5e27]: UAT User A
+              - time [ref=f5e28]: 2026/11/17 10:07
+            - paragraph [ref=f5e29]: UAT AC-4-2 edited message 編集済み
+        - paragraph [ref=f5e30]: 返信1件
+        - article [ref=f5e32]:
+          - generic [aria-hidden] [ref=f5e33]: U
+          - generic [ref=f5e34]:
+            - generic [ref=f5e35]:
+              - strong [ref=f5e36]: UAT User A
+              - time [ref=f5e37]: 2026/11/18 10:45
+            - paragraph [ref=f5e38]: UAT AC-5-1 threaded reply from usera
+            - generic [ref=f5e39]:
+              - link "編集" [ref=f5e40] [cursor=pointer]:
+                - /url: http://localhost/messages/1/thread?edit=5#message-5
+              - link "削除" [ref=f5e41] [cursor=pointer]:
+                - /url: http://localhost/messages/5/delete
+        - generic [ref=f5e42]:
+          - generic [ref=f5e43]:
+            - generic [ref=f5e44]: 返信
+            - textbox "返信" [ref=f5e45]:
+              - /placeholder: 返信を送る
+            - generic [ref=f5e46]: 1,000文字以内で入力してください。
+          - button "送信" [ref=f5e49] [cursor=pointer]

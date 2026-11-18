@@ -26,7 +26,7 @@
                 @csrf
                 @method('DELETE')
                 <div class="channel-form-actions">
-                    <a class="btn" href="{{ route('channels.show', $messageRecord->channel) }}">やめる</a>
+                    <a class="btn" href="{{ $returnUrl }}">やめる</a>
                     <button class="btn btn--danger-solid" type="submit">削除する</button>
                 </div>
             </form>
