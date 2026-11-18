@@ -1,0 +1,56 @@
+- generic [ref=f26e2]:
+  - banner [ref=f26e3]:
+    - link "チームチャットアプリ" [ref=f26e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f26e5]: チ
+      - text: チームチャットアプリ
+    - link "メッセージを検索" [ref=f26e6] [cursor=pointer]:
+      - /url: http://localhost/search
+      - text: ⌕ メッセージを検索
+    - generic [ref=f26e7]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f26e9]
+  - generic [ref=f26e10]:
+    - navigation "チャンネル" [ref=f26e11]:
+      - link "UAT公開1117" [ref=f26e13] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "UAT秘密AC62-1119" [ref=f26e14] [cursor=pointer]:
+        - /url: http://localhost/channels/4
+        - text: ▣ UAT秘密AC62-1119
+      - link "チャンネル一覧を見る" [ref=f26e15] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f26e16] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f26e17]:
+      - generic [ref=f26e18]:
+        - heading "チャンネルを編集する" [level=1] [ref=f26e19]
+        - generic [ref=f26e20]:
+          - generic [ref=f26e21]:
+            - generic [ref=f26e22]: チャンネル名*
+            - textbox "チャンネル名*" [ref=f26e23]: UAT秘密AC62-1119
+            - generic [ref=f26e24]: プライベートチャンネルです。公開範囲はあとから変更できません。
+          - generic [ref=f26e26]:
+            - generic [ref=f26e27]: 説明
+            - textbox "説明" [ref=f26e28]: AC-6-2 確認用一時チャンネル
+            - generic [ref=f26e29]:
+              - generic [ref=f26e30]: 200文字以内で入力してください。
+              - generic [ref=f26e31]: 200文字以内
+          - generic [ref=f26e32]:
+            - link "キャンセル" [ref=f26e33] [cursor=pointer]:
+              - /url: http://localhost/channels/4
+            - button "保存する" [ref=f26e34] [cursor=pointer]
+        - generic [ref=f26e35]:
+          - heading "チャンネルを削除する" [level=2] [ref=f26e36]
+          - generic [ref=f26e37]:
+            - strong [ref=f26e38]: このチャンネルを削除します
+            - paragraph [ref=f26e39]: メッセージと返信もすべて削除され、元に戻せません。
+          - generic [ref=f26e40]:
+            - generic [ref=f26e41]:
+              - generic [ref=f26e42]: 「UAT秘密AC62-1119」を削除します。確認のためチャンネル名を入力してください。
+              - textbox "「UAT秘密AC62-1119」を削除します。確認のためチャンネル名を入力してください。" [ref=f26e43]:
+                - /placeholder: UAT秘密AC62-1119
+            - generic [ref=f26e44]:
+              - link "やめる" [ref=f26e45] [cursor=pointer]:
+                - /url: http://localhost/channels/4
+              - button "削除する" [ref=f26e46] [cursor=pointer]

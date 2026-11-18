@@ -13,6 +13,10 @@
                 <span class="brandmark" aria-hidden="true">チ</span>
                 チームチャットアプリ
             </a>
+            <a class="app-search-link" href="{{ route('search.index') }}">
+                <span aria-hidden="true">⌕</span>
+                メッセージを検索
+            </a>
             <div class="app-account">
                 <span>{{ auth()->user()->name }}</span>
                 <form method="POST" action="{{ route('logout') }}">

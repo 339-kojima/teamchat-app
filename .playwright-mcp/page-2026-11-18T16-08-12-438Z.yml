@@ -1,0 +1,53 @@
+- generic [ref=f25e2]:
+  - banner [ref=f25e3]:
+    - link "チームチャットアプリ" [ref=f25e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f25e5]: チ
+      - text: チームチャットアプリ
+    - link "メッセージを検索" [ref=f25e6] [cursor=pointer]:
+      - /url: http://localhost/search
+      - text: ⌕ メッセージを検索
+    - generic [ref=f25e7]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f25e9]
+  - generic [ref=f25e10]:
+    - navigation "チャンネル" [ref=f25e11]:
+      - link "UAT公開1117" [ref=f25e13] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "UAT秘密AC62-1119" [ref=f25e14] [cursor=pointer]:
+        - /url: http://localhost/channels/4
+        - text: ▣ UAT秘密AC62-1119
+      - link "チャンネル一覧を見る" [ref=f25e15] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f25e16] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f25e17]:
+      - generic [ref=f25e18]:
+        - generic [ref=f25e19]:
+          - generic [ref=f25e20]:
+            - heading "チャンネル一覧" [level=1] [ref=f25e21]
+            - paragraph [ref=f25e22]: 公開チャンネルは、ログインしている社員なら誰でも読み書きできます。
+          - link "＋ チャンネルを作る" [ref=f25e23] [cursor=pointer]:
+            - /url: http://localhost/channels/create
+        - generic [ref=f25e24]:
+          - article [ref=f25e25]:
+            - generic [ref=f25e26]:
+              - heading "UAT公開1117 公開" [level=2] [ref=f25e27]: "# UAT公開1117 公開"
+              - paragraph [ref=f25e28]: 公開範囲の受け入れ確認 · 作成者：UAT User A
+            - generic [ref=f25e29]:
+              - link "編集" [ref=f25e30] [cursor=pointer]:
+                - /url: http://localhost/channels/1/edit
+              - link "開く" [ref=f25e31] [cursor=pointer]:
+                - /url: http://localhost/channels/1
+          - article [ref=f25e32]:
+            - generic [ref=f25e33]:
+              - heading "UAT秘密AC62-1119 プライベート" [level=2] [ref=f25e34]: ▣ UAT秘密AC62-1119 プライベート
+              - paragraph [ref=f25e35]: AC-6-2 確認用一時チャンネル · 作成者：UAT User A
+            - generic [ref=f25e36]:
+              - link "編集" [ref=f25e37] [cursor=pointer]:
+                - /url: http://localhost/channels/4/edit
+              - link "メンバー管理" [ref=f25e38] [cursor=pointer]:
+                - /url: http://localhost/channels/4/members
+              - link "開く" [ref=f25e39] [cursor=pointer]:
+                - /url: http://localhost/channels/4

@@ -1,0 +1,31 @@
+- generic [ref=f23e2]:
+  - banner [ref=f23e3]:
+    - link "チームチャットアプリ" [ref=f23e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f23e5]: チ
+      - text: チームチャットアプリ
+    - link "メッセージを検索" [ref=f23e6] [cursor=pointer]:
+      - /url: http://localhost/search
+      - text: ⌕ メッセージを検索
+    - generic [ref=f23e7]:
+      - text: UAT User B
+      - button "ログアウト" [ref=f23e9]
+  - generic [ref=f23e10]:
+    - navigation "チャンネル" [ref=f23e11]:
+      - link "UAT公開1117" [ref=f23e13] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f23e14] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f23e15] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f23e16]:
+      - generic [ref=f23e17]:
+        - heading "メッセージを検索" [level=1] [ref=f23e18]
+        - generic [ref=f23e19]:
+          - text: キーワード
+          - textbox "キーワード" [invalid] [ref=f23e20]
+          - button "検索" [ref=f23e21] [cursor=pointer]
+        - paragraph [ref=f23e22]:
+          - generic [aria-hidden] [ref=f23e23]: "!"
+          - text: キーワードを入力してください

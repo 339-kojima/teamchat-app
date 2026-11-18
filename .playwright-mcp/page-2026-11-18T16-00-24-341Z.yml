@@ -1,0 +1,67 @@
+- generic [ref=f18e2]:
+  - banner [ref=f18e3]:
+    - link "チームチャットアプリ" [ref=f18e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f18e5]: チ
+      - text: チームチャットアプリ
+    - link "メッセージを検索" [ref=f18e6] [cursor=pointer]:
+      - /url: http://localhost/search
+      - text: ⌕ メッセージを検索
+    - generic [ref=f18e7]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f18e9]
+  - generic [ref=f18e10]:
+    - navigation "チャンネル" [ref=f18e11]:
+      - link "UAT公開1117" [ref=f18e13] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "UAT秘密AC62-1119" [ref=f18e14] [cursor=pointer]:
+        - /url: http://localhost/channels/4
+        - text: ▣ UAT秘密AC62-1119
+      - link "チャンネル一覧を見る" [ref=f18e15] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f18e16] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f18e17]:
+      - generic [ref=f18e18]:
+        - generic [ref=f18e19]:
+          - generic [ref=f18e20]:
+            - heading "UAT秘密AC62-1119" [level=1] [ref=f18e21]: ▣ UAT秘密AC62-1119
+            - paragraph [ref=f18e22]: AC-6-2 確認用一時チャンネル
+          - text: プライベート
+        - generic [ref=f18e23]:
+          - generic [ref=f18e24]:
+            - term [ref=f18e25]: 作成者
+            - definition [ref=f18e26]: UAT User A
+          - generic [ref=f18e27]:
+            - term [ref=f18e28]: 公開範囲
+            - definition [ref=f18e29]: プライベート
+        - generic [ref=f18e30]:
+          - link "編集" [ref=f18e31] [cursor=pointer]:
+            - /url: http://localhost/channels/4/edit
+          - link "メンバー管理" [ref=f18e32] [cursor=pointer]:
+            - /url: http://localhost/channels/4/members
+          - link "チャンネル一覧へ戻る" [ref=f18e33] [cursor=pointer]:
+            - /url: http://localhost/channels
+        - region "メッセージ" [ref=f18e34]:
+          - article [ref=f18e36]:
+            - generic [aria-hidden] [ref=f18e37]: U
+            - generic [ref=f18e38]:
+              - generic [ref=f18e39]:
+                - strong [ref=f18e40]: UAT User A
+                - time [ref=f18e41]: 2026/11/18 16:00
+              - paragraph [ref=f18e42]: UAT_PRIVATE_ONLY_AC62_1119
+              - generic [ref=f18e43]:
+                - link "編集" [ref=f18e44] [cursor=pointer]:
+                  - /url: http://localhost/channels/4?edit=9#message-9
+                - link "削除" [ref=f18e45] [cursor=pointer]:
+                  - /url: http://localhost/messages/9/delete
+              - link "返信0件" [ref=f18e46] [cursor=pointer]:
+                - /url: http://localhost/messages/9/thread
+          - generic [ref=f18e47]:
+            - generic [ref=f18e48]:
+              - generic [ref=f18e49]: メッセージ
+              - textbox "メッセージ" [ref=f18e50]:
+                - /placeholder: "#UAT秘密AC62-1119 にメッセージを送る"
+              - generic [ref=f18e51]: 1,000文字以内で入力してください。
+            - button "送信" [ref=f18e54] [cursor=pointer]

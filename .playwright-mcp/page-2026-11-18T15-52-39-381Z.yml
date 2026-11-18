@@ -1,0 +1,64 @@
+- generic [ref=f10e2]:
+  - banner [ref=f10e3]:
+    - link "チームチャットアプリ" [ref=f10e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f10e5]: チ
+      - text: チームチャットアプリ
+    - link "メッセージを検索" [ref=f10e6] [cursor=pointer]:
+      - /url: http://localhost/search
+      - text: ⌕ メッセージを検索
+    - generic [ref=f10e7]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f10e9]
+  - generic [ref=f10e10]:
+    - navigation "チャンネル" [ref=f10e11]:
+      - link "UAT公開1117" [ref=f10e13] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f10e14] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f10e15] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f10e16]:
+      - region "スレッド" [ref=f10e17]:
+        - generic [ref=f10e18]:
+          - generic [ref=f10e19]:
+            - heading "スレッド" [level=1] [ref=f10e20]
+            - paragraph [ref=f10e21]: "#UAT公開1117"
+          - link "閉じる" [ref=f10e22] [cursor=pointer]:
+            - /url: http://localhost/channels/1
+        - article [ref=f10e24]:
+          - generic [aria-hidden] [ref=f10e25]: U
+          - generic [ref=f10e26]:
+            - generic [ref=f10e27]:
+              - strong [ref=f10e28]: UAT User A
+              - time [ref=f10e29]: 2026/11/17 10:07
+            - paragraph [ref=f10e30]: UAT AC-4-2 edited message 編集済み
+        - paragraph [ref=f10e31]: 返信2件
+        - generic [ref=f10e32]:
+          - article [ref=f10e33]:
+            - generic [aria-hidden] [ref=f10e34]: U
+            - generic [ref=f10e35]:
+              - generic [ref=f10e36]:
+                - strong [ref=f10e37]: UAT User A
+                - time [ref=f10e38]: 2026/11/18 10:45
+              - paragraph [ref=f10e39]: UAT AC-5-1 threaded reply from usera
+              - generic [ref=f10e40]:
+                - link "編集" [ref=f10e41] [cursor=pointer]:
+                  - /url: http://localhost/messages/1/thread?edit=5#message-5
+                - link "削除" [ref=f10e42] [cursor=pointer]:
+                  - /url: http://localhost/messages/5/delete
+          - article [ref=f10e43]:
+            - generic [aria-hidden] [ref=f10e44]: U
+            - generic [ref=f10e45]:
+              - generic [ref=f10e46]:
+                - strong [ref=f10e47]: UAT User B
+                - time [ref=f10e48]: 2026/11/18 10:47
+              - paragraph [ref=f10e49]: UAT AC-5-2 reply posted by userb
+        - generic [ref=f10e50]:
+          - generic [ref=f10e51]:
+            - generic [ref=f10e52]: 返信
+            - textbox "返信" [ref=f10e53]:
+              - /placeholder: 返信を送る
+            - generic [ref=f10e54]: 1,000文字以内で入力してください。
+          - button "送信" [ref=f10e57] [cursor=pointer]
