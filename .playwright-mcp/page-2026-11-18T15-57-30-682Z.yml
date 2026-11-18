@@ -1,0 +1,47 @@
+- generic [ref=f15e2]:
+  - banner [ref=f15e3]:
+    - link "チームチャットアプリ" [ref=f15e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f15e5]: チ
+      - text: チームチャットアプリ
+    - link "メッセージを検索" [ref=f15e6] [cursor=pointer]:
+      - /url: http://localhost/search
+      - text: ⌕ メッセージを検索
+    - generic [ref=f15e7]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f15e9]
+  - generic [ref=f15e10]:
+    - navigation "チャンネル" [ref=f15e11]:
+      - link "UAT公開1117" [ref=f15e13] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f15e14] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f15e15] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f15e16]:
+      - generic [ref=f15e17]:
+        - heading "チャンネルを作る" [level=1] [ref=f15e18]
+        - generic [ref=f15e19]:
+          - generic [ref=f15e20]:
+            - generic [ref=f15e21]: チャンネル名*
+            - textbox "チャンネル名*" [ref=f15e22]
+            - generic [ref=f15e23]: 50文字以内で入力してください。
+          - generic [ref=f15e25]:
+            - generic [ref=f15e26]: 説明
+            - textbox "説明" [ref=f15e27]
+            - generic [ref=f15e28]:
+              - generic [ref=f15e29]: 何について話す場所かを短く書きます。
+              - generic [ref=f15e30]: 200文字以内
+          - group "公開範囲*" [ref=f15e31]:
+            - generic [ref=f15e33]:
+              - generic [ref=f15e34]:
+                - radio "公開 ログインしている社員なら誰でも読み書きできます。" [checked] [ref=f15e35]
+                - generic [ref=f15e36]: 公開 ログインしている社員なら誰でも読み書きできます。
+              - generic [ref=f15e37]:
+                - radio "プライベート 追加された人だけが読み書きできます。作成者がメンバーを管理します。" [ref=f15e38]
+                - generic [ref=f15e39]: プライベート 追加された人だけが読み書きできます。作成者がメンバーを管理します。
+          - generic [ref=f15e40]:
+            - link "キャンセル" [ref=f15e41] [cursor=pointer]:
+              - /url: http://localhost/channels
+            - button "作成する" [ref=f15e42] [cursor=pointer]

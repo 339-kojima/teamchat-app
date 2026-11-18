@@ -1,0 +1,32 @@
+- generic [ref=f22e2]:
+  - banner [ref=f22e3]:
+    - link "チームチャットアプリ" [ref=f22e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f22e5]: チ
+      - text: チームチャットアプリ
+    - link "メッセージを検索" [ref=f22e6] [cursor=pointer]:
+      - /url: http://localhost/search
+      - text: ⌕ メッセージを検索
+    - generic [ref=f22e7]:
+      - text: UAT User B
+      - button "ログアウト" [ref=f22e9]
+  - generic [ref=f22e10]:
+    - navigation "チャンネル" [ref=f22e11]:
+      - link "UAT公開1117" [ref=f22e13] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f22e14] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f22e15] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f22e16]:
+      - generic [ref=f22e17]:
+        - heading "メッセージを検索" [level=1] [ref=f22e18]
+        - generic [ref=f22e19]:
+          - text: キーワード
+          - textbox "キーワード" [ref=f22e20]: UAT_PRIVATE_ONLY_AC62_1119
+          - button "検索" [ref=f22e21] [cursor=pointer]
+        - paragraph [ref=f22e22]: 「UAT_PRIVATE_ONLY_AC62_1119」の検索結果 0件
+        - region "検索結果" [ref=f22e23]:
+          - heading "「UAT_PRIVATE_ONLY_AC62_1119」に一致するメッセージはありません" [level=2] [ref=f22e24]
+          - paragraph [ref=f22e25]: 別のキーワードで試すか、キーワードを短くしてください。

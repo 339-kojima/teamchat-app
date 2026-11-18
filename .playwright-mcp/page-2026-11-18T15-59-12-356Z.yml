@@ -1,0 +1,54 @@
+- generic [ref=f17e2]:
+  - banner [ref=f17e3]:
+    - link "チームチャットアプリ" [ref=f17e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f17e5]: チ
+      - text: チームチャットアプリ
+    - link "メッセージを検索" [ref=f17e6] [cursor=pointer]:
+      - /url: http://localhost/search
+      - text: ⌕ メッセージを検索
+    - generic [ref=f17e7]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f17e9]
+  - generic [ref=f17e10]:
+    - navigation "チャンネル" [ref=f17e11]:
+      - link "UAT公開1117" [ref=f17e13] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "UAT秘密AC62-1119" [ref=f17e14] [cursor=pointer]:
+        - /url: http://localhost/channels/4
+        - text: ▣ UAT秘密AC62-1119
+      - link "チャンネル一覧を見る" [ref=f17e15] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f17e16] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f17e17]:
+      - generic [ref=f17e18]:
+        - generic [ref=f17e19]:
+          - generic [ref=f17e20]:
+            - heading "UAT秘密AC62-1119" [level=1] [ref=f17e21]: ▣ UAT秘密AC62-1119
+            - paragraph [ref=f17e22]: AC-6-2 確認用一時チャンネル
+          - text: プライベート
+        - generic [ref=f17e23]:
+          - generic [ref=f17e24]:
+            - term [ref=f17e25]: 作成者
+            - definition [ref=f17e26]: UAT User A
+          - generic [ref=f17e27]:
+            - term [ref=f17e28]: 公開範囲
+            - definition [ref=f17e29]: プライベート
+        - generic [ref=f17e30]:
+          - link "編集" [ref=f17e31] [cursor=pointer]:
+            - /url: http://localhost/channels/4/edit
+          - link "メンバー管理" [ref=f17e32] [cursor=pointer]:
+            - /url: http://localhost/channels/4/members
+          - link "チャンネル一覧へ戻る" [ref=f17e33] [cursor=pointer]:
+            - /url: http://localhost/channels
+        - region "メッセージ" [ref=f17e34]:
+          - paragraph [ref=f17e36]: メッセージはまだありません。
+          - generic [ref=f17e37]:
+            - generic [ref=f17e38]:
+              - generic [ref=f17e39]: メッセージ
+              - textbox "メッセージ" [ref=f17e40]:
+                - /placeholder: "#UAT秘密AC62-1119 にメッセージを送る"
+              - generic [ref=f17e41]: 1,000文字以内で入力してください。
+            - button "送信" [ref=f17e44] [cursor=pointer]
