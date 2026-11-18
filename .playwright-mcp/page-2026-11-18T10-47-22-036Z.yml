@@ -1,0 +1,61 @@
+- generic [ref=f9e2]:
+  - banner [ref=f9e3]:
+    - link "チームチャットアプリ" [ref=f9e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f9e5]: チ
+      - text: チームチャットアプリ
+    - generic [ref=f9e6]:
+      - text: UAT User B
+      - button "ログアウト" [ref=f9e8]
+  - generic [ref=f9e9]:
+    - navigation "チャンネル" [ref=f9e10]:
+      - link "UAT公開1117" [ref=f9e12] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f9e13] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f9e14] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f9e15]:
+      - region "スレッド" [ref=f9e16]:
+        - generic [ref=f9e17]:
+          - generic [ref=f9e18]:
+            - heading "スレッド" [level=1] [ref=f9e19]
+            - paragraph [ref=f9e20]: "#UAT公開1117"
+          - link "閉じる" [ref=f9e21] [cursor=pointer]:
+            - /url: http://localhost/channels/1
+        - article [ref=f9e23]:
+          - generic [aria-hidden] [ref=f9e24]: U
+          - generic [ref=f9e25]:
+            - generic [ref=f9e26]:
+              - strong [ref=f9e27]: UAT User A
+              - time [ref=f9e28]: 2026/11/17 10:07
+            - paragraph [ref=f9e29]: UAT AC-4-2 edited message 編集済み
+        - paragraph [ref=f9e30]: 返信2件
+        - generic [ref=f9e31]:
+          - article [ref=f9e32]:
+            - generic [aria-hidden] [ref=f9e33]: U
+            - generic [ref=f9e34]:
+              - generic [ref=f9e35]:
+                - strong [ref=f9e36]: UAT User A
+                - time [ref=f9e37]: 2026/11/18 10:45
+              - paragraph [ref=f9e38]: UAT AC-5-1 threaded reply from usera
+          - article [ref=f9e39]:
+            - generic [aria-hidden] [ref=f9e40]: U
+            - generic [ref=f9e41]:
+              - generic [ref=f9e42]:
+                - strong [ref=f9e43]: UAT User B
+                - time [ref=f9e44]: 2026/11/18 10:47
+              - paragraph [ref=f9e45]: UAT AC-5-2 reply posted by userb
+              - generic [ref=f9e46]:
+                - link "編集" [ref=f9e47] [cursor=pointer]:
+                  - /url: http://localhost/messages/1/thread?edit=6#message-6
+                - link "削除" [ref=f9e48] [cursor=pointer]:
+                  - /url: http://localhost/messages/6/delete
+        - generic [ref=f9e49]:
+          - generic [ref=f9e50]:
+            - generic [ref=f9e51]: 返信
+            - textbox "返信" [ref=f9e52]:
+              - /placeholder: 返信を送る
+            - generic [ref=f9e53]: 1,000文字以内で入力してください。
+          - button "送信" [ref=f9e56] [cursor=pointer]

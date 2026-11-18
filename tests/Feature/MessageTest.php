@@ -184,7 +184,7 @@ class MessageTest extends TestCase
             ->assertSee('返信1件');
     }
 
-    public function test_author_can_edit_and_delete_a_reply_without_a_thread_screen(): void
+    public function test_author_can_edit_and_delete_a_reply_from_its_thread_screen(): void
     {
         $parentAuthor = User::factory()->create();
         $replyAuthor = User::factory()->create();
@@ -194,7 +194,7 @@ class MessageTest extends TestCase
 
         $this->actingAs($replyAuthor)
             ->put(route('messages.update', $reply), ['body' => '返信後'])
-            ->assertRedirect(route('channels.show', $channel));
+            ->assertRedirect(route('messages.thread', $parent));
 
         $this->assertDatabaseHas('messages', [
             'id' => $reply->id,
@@ -205,7 +205,7 @@ class MessageTest extends TestCase
 
         $this->actingAs($replyAuthor)
             ->delete(route('messages.destroy', $reply))
-            ->assertRedirect(route('channels.show', $channel));
+            ->assertRedirect(route('messages.thread', $parent));
 
         $this->assertDatabaseHas('messages', [
             'id' => $reply->id,

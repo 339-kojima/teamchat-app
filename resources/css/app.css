@@ -922,6 +922,41 @@ a:hover {
 
 .message__replies {
     margin: var(--sp-2) 0 0;
+    display: inline-block;
+}
+
+.thread-page {
+    width: min(880px, 100%);
+    margin: 0 auto;
+}
+
+.thread-page__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--sp-4);
+    margin-bottom: var(--sp-5);
+}
+
+.thread-page__header .t-caption {
+    margin-top: var(--sp-1);
+}
+
+.thread-page__origin,
+.thread-page__replies {
+    border: var(--border);
+    border-radius: var(--r-lg);
+    background: var(--surface);
+}
+
+.thread-page__count {
+    margin: var(--sp-4) 0 var(--sp-2);
+    color: var(--text-muted);
+    font-size: var(--fs-caption);
+}
+
+.thread-page__replies {
+    overflow: hidden;
 }
 
 .message__deleted {

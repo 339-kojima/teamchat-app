@@ -9,6 +9,20 @@ use Illuminate\Auth\Access\Response;
 
 class MessagePolicy
 {
+    public function thread(User $user, Message $message): Response
+    {
+        if ($message->parent_id !== null) {
+            return Response::denyAsNotFound();
+        }
+
+        return Channel::query()
+            ->visibleTo($user)
+            ->whereKey($message->channel_id)
+            ->exists()
+            ? Response::allow()
+            : Response::denyAsNotFound();
+    }
+
     public function update(User $user, Message $message): Response
     {
         return $this->canManage($user, $message)

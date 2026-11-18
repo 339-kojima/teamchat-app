@@ -27,12 +27,57 @@ class MessageController extends Controller
         return redirect()->route('channels.show', $channel);
     }
 
+    public function thread(Message $message): View
+    {
+        $this->authorize('thread', $message);
+
+        $message->load('author', 'channel');
+        $replies = $message->replies()
+            ->with('author')
+            ->orderBy('created_at')
+            ->orderBy('id')
+            ->get();
+
+        $editingReply = null;
+        if (request()->filled('edit')) {
+            $editingReply = $replies->firstWhere('id', (int) request()->query('edit'));
+            abort_if($editingReply === null, 404);
+            $this->authorize('update', $editingReply);
+        }
+
+        return $this->page('messages.thread', [
+            'parentMessage' => $message,
+            'replies' => $replies,
+            'editingReply' => $editingReply,
+        ]);
+    }
+
+    public function storeReply(Request $request, Message $message): RedirectResponse
+    {
+        $this->authorize('thread', $message);
+
+        $data = $this->validate($request, [
+            'body' => ['required', 'string', 'max:1000'],
+        ], $this->validationMessages());
+
+        $message->replies()->create([
+            'channel_id' => $message->channel_id,
+            'user_id' => $request->user()->getKey(),
+            'body' => $data['body'],
+        ]);
+
+        return redirect()->route('messages.thread', $message);
+    }
+
     public function confirmDestroy(Message $message): View
     {
         $this->authorize('delete', $message);
 
         return $this->page('messages.delete', [
             'messageRecord' => $message->load(['author', 'channel']),
+            'returnUrl' => $message->parent_id === null
+                ? route('channels.show', $message->channel)
+                : route('messages.thread', $message->parent_id),
         ]);
     }
 
@@ -49,7 +94,9 @@ class MessageController extends Controller
             'edited_at' => now(),
         ]);
 
-        return redirect()->route('channels.show', $message->channel);
+        return $message->parent_id === null
+            ? redirect()->route('channels.show', $message->channel)
+            : redirect()->route('messages.thread', $message->parent_id);
     }
 
     public function destroy(Message $message): RedirectResponse
@@ -63,7 +110,9 @@ class MessageController extends Controller
             ]);
         });
 
-        return redirect()->route('channels.show', $message->channel);
+        return $message->parent_id === null
+            ? redirect()->route('channels.show', $message->channel)
+            : redirect()->route('messages.thread', $message->parent_id);
     }
 
     private function validationMessages(): array
