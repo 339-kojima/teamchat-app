@@ -1,0 +1,47 @@
+- generic [ref=f4e2]:
+  - banner [ref=f4e3]:
+    - link "チームチャットアプリ" [ref=f4e4] [cursor=pointer]:
+      - /url: http://localhost/channels
+      - generic [aria-hidden] [ref=f4e5]: チ
+      - text: チームチャットアプリ
+    - link "メッセージを検索" [ref=f4e6] [cursor=pointer]:
+      - /url: http://localhost/search
+      - text: ⌕ メッセージを検索
+    - generic [ref=f4e7]:
+      - text: UAT User A
+      - button "ログアウト" [ref=f4e9]
+  - generic [ref=f4e10]:
+    - navigation "チャンネル" [ref=f4e11]:
+      - link "UAT公開1117" [ref=f4e13] [cursor=pointer]:
+        - /url: http://localhost/channels/1
+        - text: "# UAT公開1117"
+      - link "チャンネル一覧を見る" [ref=f4e14] [cursor=pointer]:
+        - /url: http://localhost/channels
+      - link "＋ チャンネルを作る" [ref=f4e15] [cursor=pointer]:
+        - /url: http://localhost/channels/create
+    - main [ref=f4e16]:
+      - generic [ref=f4e17]:
+        - heading "チャンネルを作る" [level=1] [ref=f4e18]
+        - generic [ref=f4e19]:
+          - generic [ref=f4e20]:
+            - generic [ref=f4e21]: チャンネル名*
+            - textbox "チャンネル名*" [ref=f4e22]
+            - generic [ref=f4e23]: 50文字以内で入力してください。
+          - generic [ref=f4e25]:
+            - generic [ref=f4e26]: 説明
+            - textbox "説明" [ref=f4e27]
+            - generic [ref=f4e28]:
+              - generic [ref=f4e29]: 何について話す場所かを短く書きます。
+              - generic [ref=f4e30]: 200文字以内
+          - group "公開範囲*" [ref=f4e31]:
+            - generic [ref=f4e33]:
+              - generic [ref=f4e34]:
+                - radio "公開 ログインしている社員なら誰でも読み書きできます。" [checked] [ref=f4e35]
+                - generic [ref=f4e36]: 公開 ログインしている社員なら誰でも読み書きできます。
+              - generic [ref=f4e37]:
+                - radio "プライベート 追加された人だけが読み書きできます。作成者がメンバーを管理します。" [ref=f4e38]
+                - generic [ref=f4e39]: プライベート 追加された人だけが読み書きできます。作成者がメンバーを管理します。
+          - generic [ref=f4e40]:
+            - link "キャンセル" [ref=f4e41] [cursor=pointer]:
+              - /url: http://localhost/channels
+            - button "作成する" [ref=f4e42] [cursor=pointer]

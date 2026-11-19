@@ -1,0 +1,58 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Log in" [ref=e4] [cursor=pointer]:
+      - /url: http://localhost/login
+    - link "Register" [ref=e5] [cursor=pointer]:
+      - /url: http://localhost/register
+  - generic [ref=e6]:
+    - generic [ref=e11]:
+      - link [ref=e12] [cursor=pointer]:
+        - /url: https://laravel.com/docs
+        - generic [ref=e13]:
+          - heading "Documentation" [level=2] [ref=e17]
+          - paragraph [ref=e18]: Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
+      - link [ref=e21] [cursor=pointer]:
+        - /url: https://laracasts.com
+        - generic [ref=e22]:
+          - heading "Laracasts" [level=2] [ref=e26]
+          - paragraph [ref=e27]: Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
+      - link [ref=e30] [cursor=pointer]:
+        - /url: https://laravel-news.com
+        - generic [ref=e31]:
+          - heading "Laravel News" [level=2] [ref=e35]
+          - paragraph [ref=e36]: Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
+      - generic [ref=e40]:
+        - heading "Vibrant Ecosystem" [level=2] [ref=e44]
+        - paragraph [ref=e45]:
+          - text: Laravel's robust library of first-party tools and libraries, such as
+          - link "Forge" [ref=e46] [cursor=pointer]:
+            - /url: https://forge.laravel.com
+          - text: ","
+          - link "Vapor" [ref=e47] [cursor=pointer]:
+            - /url: https://vapor.laravel.com
+          - text: ","
+          - link "Nova" [ref=e48] [cursor=pointer]:
+            - /url: https://nova.laravel.com
+          - text: ", and"
+          - link "Envoyer" [ref=e49] [cursor=pointer]:
+            - /url: https://envoyer.io
+          - text: help you take your projects to the next level. Pair them with powerful open source libraries like
+          - link "Cashier" [ref=e50] [cursor=pointer]:
+            - /url: https://laravel.com/docs/billing
+          - text: ","
+          - link "Dusk" [ref=e51] [cursor=pointer]:
+            - /url: https://laravel.com/docs/dusk
+          - text: ","
+          - link "Echo" [ref=e52] [cursor=pointer]:
+            - /url: https://laravel.com/docs/broadcasting
+          - text: ","
+          - link "Horizon" [ref=e53] [cursor=pointer]:
+            - /url: https://laravel.com/docs/horizon
+          - text: ","
+          - link "Sanctum" [ref=e54] [cursor=pointer]:
+            - /url: https://laravel.com/docs/sanctum
+          - text: ","
+          - link "Telescope" [ref=e55] [cursor=pointer]:
+            - /url: https://laravel.com/docs/telescope
+          - text: ", and more."
+    - generic [ref=e56]: Laravel v10.50.3 (PHP v8.5.8)
