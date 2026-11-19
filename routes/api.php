@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\V1\ChannelController as PublicChannelController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::prefix('v1')->group(function () {
+    Route::get('/channels', [PublicChannelController::class, 'index']);
+    Route::get('/channels/{channel}/messages', [PublicChannelController::class, 'messages']);
+    Route::options('/channels', [PublicChannelController::class, 'methodNotAllowed']);
+    Route::options('/channels/{channel}/messages', [PublicChannelController::class, 'methodNotAllowed']);
 });
