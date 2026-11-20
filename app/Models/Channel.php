@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Channel extends Model
 {
     protected $fillable = [
+        'seed_key',
         'owner_id',
         'name',
         'description',

@@ -12,6 +12,7 @@ class Message extends Model
     use HasFactory;
 
     protected $fillable = [
+        'seed_key',
         'channel_id',
         'user_id',
         'parent_id',
